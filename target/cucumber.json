@@ -1,0 +1,111 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-06T18:08:28.107Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4013349000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Create a new contact",
+        "description": "",
+        "id": "contacts-page-testing;create-a-new-contact",
+        "after": [
+          {
+            "result": {
+              "duration": 786515900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1294594900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1362595800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user logs in as inventory_manager",
+            "match": {
+              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3119525300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigates to Contacts module",
+            "match": {
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7780145900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user creates a contact",
+            "match": {
+              "location": "ContactsStepDefinitions.user_creates_a_contact()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@create_a_contact"
+          }
+        ]
+      }
+    ],
+    "name": "Contacts page testing",
+    "description": "",
+    "id": "contacts-page-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "tags": [
+      {
+        "name": "@contacts_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

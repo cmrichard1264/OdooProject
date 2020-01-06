@@ -20,6 +20,7 @@ public class LoginPage extends BasePage{
         userNameInput.sendKeys(userName);
         //Keys.ENTER to replace login click
         passwordInput.sendKeys(password, Keys.ENTER);
+
     }
 
     public void login() {
