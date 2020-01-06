@@ -2,6 +2,7 @@ package com.odoo.pages;
 
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,6 +42,7 @@ public class ContactsPage extends BasePage {
     public WebElement website;
 
 
+
     public void createContact(){
         BrowserUtils.wait(1);
         create.click();
@@ -63,6 +65,7 @@ public class ContactsPage extends BasePage {
         BrowserUtils.wait(1);
 
     }
+
 
 
 

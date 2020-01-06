@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Create a new contact",
+  "name": "Verify  that check box is clicked",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -18,7 +18,7 @@ formatter.scenario({
       "name": "@contacts_page"
     },
     {
-      "name": "@create_a_contact"
+      "name": "@Verify_checkbox_isClicked"
     }
   ]
 });
@@ -56,11 +56,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates a contact",
+  "name": "verify that the top checkbox is clicked",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_creates_a_contact()"
+  "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
 });
 formatter.result({
   "status": "passed"

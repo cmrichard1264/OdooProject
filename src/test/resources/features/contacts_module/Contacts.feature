@@ -8,3 +8,4 @@ Feature: Contacts page testing
     Then user navigates to Contacts module
     And user creates a contact
 
+

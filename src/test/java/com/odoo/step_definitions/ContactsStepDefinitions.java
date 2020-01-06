@@ -42,5 +42,11 @@ public class ContactsStepDefinitions {
         System.out.println("Contact created successfully!");
 
     }
+    @Then("verify that the top checkbox is clicked")
+    public void verify_that_the_top_checkbox_is_clicked() {
+     contactsPage.CheckBoxisClicked();
+        System.out.println("Box is checked");
+    }
+
 
 }
