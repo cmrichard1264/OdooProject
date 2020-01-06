@@ -3,6 +3,7 @@ package com.odoo.step_definitions;
 
 import com.odoo.pages.ContactsPage;
 import com.odoo.pages.LoginPage;
+import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.ConfigurationReader;
 import com.odoo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -12,7 +13,7 @@ import io.cucumber.java.en.Then;
 public class ContactsStepDefinitions {
 
     LoginPage loginPage = new LoginPage();//created a login page object
-    ContactsPage contactsPage= new ContactsPage();
+    ContactsPage contactsPage = new ContactsPage();
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
@@ -32,7 +33,7 @@ public class ContactsStepDefinitions {
 
     @Then("user navigates to Contacts module")
     public void user_navigates_to_module() {
-    contactsPage.navigateToContacts();
+        contactsPage.navigateToContacts();
         System.out.println("I am in Contacts module");
     }
 
@@ -40,7 +41,15 @@ public class ContactsStepDefinitions {
     public void user_creates_a_contact() {
         contactsPage.createContact();
         System.out.println("Contact created successfully!");
+    }
+
+    @Then("checkbox is selected")
+    public void checkbox_is_selected() {
+        contactsPage.checkboxisclicked();
+
+
 
     }
+
 
 }

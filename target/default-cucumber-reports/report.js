@@ -18,7 +18,7 @@ formatter.scenario({
       "name": "@contacts_page"
     },
     {
-      "name": "@create_a_contact"
+      "name": "@checkbox"
     }
   ]
 });
@@ -56,11 +56,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates a contact",
+  "name": "checkbox is selected",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_creates_a_contact()"
+  "location": "ContactsStepDefinitions.checkbox_is_selected()"
 });
 formatter.result({
   "status": "passed"

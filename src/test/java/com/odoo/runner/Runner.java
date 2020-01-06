@@ -9,11 +9,12 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
         dryRun = false,
-        tags = "@create_a_contact",
+        tags = "@checkbox",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"
         }
 )
 
 public class Runner {
+
 }

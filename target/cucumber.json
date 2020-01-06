@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-06T18:08:28.107Z",
+        "start_timestamp": "2020-01-06T18:59:02.908Z",
         "before": [
           {
             "result": {
-              "duration": 4013349000,
+              "duration": 5432220300,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
+        "line": 13,
         "name": "Create a new contact",
         "description": "",
         "id": "contacts-page-testing;create-a-new-contact",
         "after": [
           {
             "result": {
-              "duration": 786515900,
+              "duration": 939680200,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 1294594900,
+              "duration": 1994122200,
               "status": "passed"
             },
-            "line": 6,
+            "line": 14,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 1362595800,
+              "duration": 2411796300,
               "status": "passed"
             },
-            "line": 7,
+            "line": 15,
             "name": "user logs in as inventory_manager",
             "match": {
               "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
@@ -59,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 3119525300,
+              "duration": 3510158200,
               "status": "passed"
             },
-            "line": 8,
+            "line": 16,
             "name": "user navigates to Contacts module",
             "match": {
               "location": "ContactsStepDefinitions.user_navigates_to_module()"
@@ -71,13 +71,13 @@
           },
           {
             "result": {
-              "duration": 7780145900,
+              "duration": 6486494300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "user creates a contact",
+            "line": 17,
+            "name": "checkbox is selected",
             "match": {
-              "location": "ContactsStepDefinitions.user_creates_a_contact()"
+              "location": "ContactsStepDefinitions.checkbox_is_selected()"
             },
             "keyword": "And "
           }
@@ -87,7 +87,7 @@
             "name": "@contacts_page"
           },
           {
-            "name": "@create_a_contact"
+            "name": "@checkbox"
           }
         ]
       }

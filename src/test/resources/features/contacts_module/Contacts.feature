@@ -8,3 +8,15 @@ Feature: Contacts page testing
     Then user navigates to Contacts module
     And user creates a contact
 
+
+  @checkbox
+  Scenario: Create a new contact
+    Given user is on the login page
+    And user logs in as inventory_manager
+    Then user navigates to Contacts module
+    And checkbox is selected
+
+
+
+
+
