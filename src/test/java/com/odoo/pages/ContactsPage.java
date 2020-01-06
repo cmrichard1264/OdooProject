@@ -2,6 +2,7 @@ package com.odoo.pages;
 
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,6 +41,15 @@ public class ContactsPage extends BasePage {
     @FindBy(xpath = "//input[@name=\"website\"]" )
     public WebElement website;
 
+    @FindBy(xpath = "//button[@data-original-title=\"List\"]")
+    public WebElement List;
+
+    @FindBy(xpath ="//tr[1]/td/div/input" )
+    public WebElement topCheckbox;
+
+
+
+
 
     public void createContact(){
         BrowserUtils.wait(1);
@@ -64,10 +74,13 @@ public class ContactsPage extends BasePage {
 
     }
 
+    public void CheckBoxisClicked() {
+        BrowserUtils.wait(2);
+        List.click();
+        BrowserUtils.wait(2);
+        topCheckbox.click();
+        Assert.assertTrue(topCheckbox.isSelected());
 
 
-
-
-
-
-}
+    }
+    }
