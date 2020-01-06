@@ -41,6 +41,14 @@ public class ContactsPage extends BasePage {
     @FindBy(xpath = "//input[@name=\"website\"]" )
     public WebElement website;
 
+    @FindBy(xpath = "//button[@data-original-title=\"List\"]")
+    public WebElement List;
+
+    @FindBy(xpath ="//tr[1]/td/div/input" )
+    public WebElement topCheckbox;
+
+
+
 
 
     public void createContact(){
@@ -66,11 +74,13 @@ public class ContactsPage extends BasePage {
 
     }
 
+    public void CheckBoxisClicked() {
+        BrowserUtils.wait(2);
+        List.click();
+        BrowserUtils.wait(2);
+        topCheckbox.click();
+        Assert.assertTrue(topCheckbox.isSelected());
 
 
-
-
-
-
-
-}
+    }
+    }
