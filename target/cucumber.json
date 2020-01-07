@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-06T20:13:55.517Z",
+        "start_timestamp": "2020-01-06T22:14:40.380Z",
         "before": [
           {
             "result": {
-              "duration": 5643605500,
+              "duration": 4072682700,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 13,
-        "name": "Create a new contact",
+        "line": 12,
+        "name": "Verify  that check box is clicked",
         "description": "",
-        "id": "contacts-page-testing;create-a-new-contact",
+        "id": "contacts-page-testing;verify--that-check-box-is-clicked",
         "after": [
           {
             "result": {
-              "duration": 843392100,
+              "duration": 611997700,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 2160460500,
+              "duration": 3303013300,
               "status": "passed"
             },
-            "line": 14,
+            "line": 13,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 2637982200,
+              "duration": 3534825000,
               "status": "passed"
             },
-            "line": 15,
+            "line": 14,
             "name": "user logs in as inventory_manager",
             "match": {
               "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
@@ -59,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 3639370900,
+              "duration": 3075926700,
               "status": "passed"
             },
-            "line": 16,
+            "line": 15,
             "name": "user navigates to Contacts module",
             "match": {
               "location": "ContactsStepDefinitions.user_navigates_to_module()"
@@ -71,13 +71,13 @@
           },
           {
             "result": {
-              "duration": 4502933900,
+              "duration": 4142477600,
               "status": "passed"
             },
-            "line": 17,
-            "name": "checkbox is selected",
+            "line": 16,
+            "name": "verify that the top checkbox is clicked",
             "match": {
-              "location": "ContactsStepDefinitions.checkbox_is_selected()"
+              "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
             },
             "keyword": "And "
           }
@@ -87,7 +87,7 @@
             "name": "@contacts_page"
           },
           {
-            "name": "@checkbox"
+            "name": "@Verify_checkbox_isClicked"
           }
         ]
       }

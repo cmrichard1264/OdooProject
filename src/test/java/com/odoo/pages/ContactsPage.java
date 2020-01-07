@@ -41,6 +41,11 @@ public class ContactsPage extends BasePage {
     @FindBy(xpath = "//input[@name=\"website\"]" )
     public WebElement website;
 
+    @FindBy(xpath = "//button[@data-original-title=\"List\"]")
+    public WebElement List;
+
+    @FindBy(xpath ="//tr[1]/td/div/input" )
+    public WebElement topCheckbox;
 
 
 
@@ -66,14 +71,16 @@ public class ContactsPage extends BasePage {
         BrowserUtils.wait(2);
         Driver.get().findElement(By.xpath("//a[@data-menu=\"68\"]")).click();
         BrowserUtils.wait(1);
+
     }
 
+    public void CheckBoxisClicked() {
+        BrowserUtils.wait(2);
+        List.click();
+        BrowserUtils.wait(2);
+        topCheckbox.click();
+        Assert.assertTrue(topCheckbox.isSelected());
 
 
-
-
-
-
-
-
-}
+    }
+    }

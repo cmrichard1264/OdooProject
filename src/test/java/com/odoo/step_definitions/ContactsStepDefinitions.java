@@ -3,7 +3,6 @@ package com.odoo.step_definitions;
 
 import com.odoo.pages.ContactsPage;
 import com.odoo.pages.LoginPage;
-import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.ConfigurationReader;
 import com.odoo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -44,9 +43,11 @@ public class ContactsStepDefinitions {
     }
 
 
-
-
-
+    @Then("verify that the top checkbox is clicked")
+    public void verify_that_the_top_checkbox_is_clicked() {
+        contactsPage.CheckBoxisClicked();
+        System.out.println("Box is checked");
     }
 
 
+}
