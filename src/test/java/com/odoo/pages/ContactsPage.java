@@ -4,6 +4,7 @@ import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -47,8 +48,11 @@ public class ContactsPage extends BasePage {
     @FindBy(xpath ="//tr[1]/td/div/input" )
     public WebElement topCheckbox;
 
+@FindBy(xpath = "//input[@class=\"o_searchview_input\"][@placeholder=\"Search...\"]")
+public WebElement Search;
 
-
+@FindBy(xpath = "//p[contains(text(), \"Click to add a contact in your contacts directory.\")]")
+public WebElement Message;
 
 
     public void createContact(){
@@ -83,4 +87,15 @@ public class ContactsPage extends BasePage {
 
 
     }
+    public void MessageIsDisplayed(){
+        BrowserUtils.wait(2);
+        Search.sendKeys("Aijamal", Keys.ENTER);
+        BrowserUtils.wait(2);
+        Assert.assertTrue(Message.isDisplayed());
+    }
+
+
+
+
+
     }

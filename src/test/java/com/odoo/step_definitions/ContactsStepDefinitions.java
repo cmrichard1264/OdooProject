@@ -1,18 +1,18 @@
 package com.odoo.step_definitions;
 
 
-import com.odoo.pages.ContactsPage;
-import com.odoo.pages.LoginPage;
-import com.odoo.utilities.ConfigurationReader;
-import com.odoo.utilities.Driver;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+        import com.odoo.pages.ContactsPage;
+        import com.odoo.pages.LoginPage;
+        import com.odoo.utilities.ConfigurationReader;
+        import com.odoo.utilities.Driver;
+        import io.cucumber.java.en.Given;
+        import io.cucumber.java.en.Then;
 
 
 public class ContactsStepDefinitions {
 
     LoginPage loginPage = new LoginPage();//created a login page object
-    ContactsPage contactsPage= new ContactsPage();
+    ContactsPage contactsPage = new ContactsPage();
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
@@ -32,7 +32,7 @@ public class ContactsStepDefinitions {
 
     @Then("user navigates to Contacts module")
     public void user_navigates_to_module() {
-    contactsPage.navigateToContacts();
+        contactsPage.navigateToContacts();
         System.out.println("I am in Contacts module");
     }
 
@@ -42,11 +42,16 @@ public class ContactsStepDefinitions {
         System.out.println("Contact created successfully!");
 
     }
+
     @Then("verify that the top checkbox is clicked")
     public void verify_that_the_top_checkbox_is_clicked() {
-     contactsPage.CheckBoxisClicked();
+        contactsPage.CheckBoxisClicked();
         System.out.println("Box is checked");
     }
 
-
+    @Then("verify that message is displayed")
+    public void verify_that_message_is_displayed() {
+        contactsPage.MessageIsDisplayed();
+        System.out.println("Message is displayed");
+    }
 }
