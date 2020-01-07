@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-06T22:14:40.380Z",
+        "start_timestamp": "2020-01-07T03:21:19.365Z",
         "before": [
           {
             "result": {
-              "duration": 4072682700,
+              "duration": 3058119869,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 12,
-        "name": "Verify  that check box is clicked",
+        "line": 5,
+        "name": "verify that page limit is 16",
         "description": "",
-        "id": "contacts-page-testing;verify--that-check-box-is-clicked",
+        "id": "pos-page-testing;verify-that-page-limit-is-16",
         "after": [
           {
             "result": {
-              "duration": 611997700,
+              "duration": 172359151,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3303013300,
+              "duration": 2070678694,
               "status": "passed"
             },
-            "line": 13,
+            "line": 6,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
@@ -47,59 +47,65 @@
           },
           {
             "result": {
-              "duration": 3534825000,
+              "duration": 2829876552,
               "status": "passed"
             },
-            "line": 14,
-            "name": "user logs in as inventory_manager",
+            "line": 7,
+            "name": "user logs in as Pos manager",
             "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+              "location": "PosStepDefenitions.user_logs_in_as_Pos_manager()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3075926700,
+              "duration": 4159371909,
               "status": "passed"
             },
-            "line": 15,
-            "name": "user navigates to Contacts module",
+            "line": 8,
+            "name": "user navigates to Pos Module",
             "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+              "location": "PosStepDefenitions.user_navigates_to_Pos_Module()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 4142477600,
+              "duration": 3059984334,
               "status": "passed"
             },
-            "line": 16,
-            "name": "verify that the top checkbox is clicked",
+            "line": 9,
+            "name": "verify that page limit is 16",
             "match": {
-              "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+              "arguments": [
+                {
+                  "val": "16",
+                  "offset": 26
+                }
+              ],
+              "location": "PosStepDefenitions.verify_that_page_limit_is(Integer)"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@contacts_page"
+            "name": "@Pos_page"
           },
           {
-            "name": "@Verify_checkbox_isClicked"
+            "name": "@page_limit_is_16"
           }
         ]
       }
     ],
-    "name": "Contacts page testing",
+    "name": "Pos page testing",
     "description": "",
-    "id": "contacts-page-testing",
+    "id": "pos-page-testing",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "uri": "file:src/test/resources/features/Pos_module/Pos.feature",
     "tags": [
       {
-        "name": "@contacts_page",
+        "name": "@Pos_page",
         "type": "Tag",
         "location": {
           "line": 1,
