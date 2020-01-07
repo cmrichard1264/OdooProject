@@ -43,13 +43,10 @@ public class ContactsStepDefinitions {
         System.out.println("Contact created successfully!");
     }
 
-    @Then("checkbox is selected")
-    public void checkbox_is_selected() {
-        contactsPage.checkboxisclicked();
+
 
 
 
     }
 
 
-}
