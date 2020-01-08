@@ -1,13 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-08T00:54:56.300Z",
+        "start_timestamp": "2020-01-07T02:03:13.234Z",
         "before": [
           {
             "result": {
-              "duration": 1560092935,
+              "duration": 4481952981,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Verify that that all checkboxes are clicked when user clicks at \u0027select all checkbox\u0027.",
+        "line": 19,
+        "name": "Verify that display",
         "description": "",
-        "id": "quotations-module-functionality;verify-that-that-all-checkboxes-are-clicked-when-user-clicks-at--select-all-checkbox-.",
+        "id": "contacts-page-testing;verify-that-display",
         "after": [
           {
             "result": {
-              "duration": 86076670,
+              "duration": 115994596,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 5839419205,
+              "duration": 2521947925,
               "status": "passed"
             },
-            "line": 5,
+            "line": 20,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
@@ -47,101 +47,65 @@
           },
           {
             "result": {
-              "duration": 10324356799,
+              "duration": 2116705419,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user logs in as \"eventscrmmanager2\"",
+            "line": 21,
+            "name": "user logs in as inventory_manager",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"eventscrmmanager2\"",
-                  "offset": 16
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2144218157,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user navigates to \"CRM\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"CRM\"",
-                  "offset": 18
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2130144851,
+              "duration": 3415506077,
               "status": "passed"
             },
-            "line": 8,
-            "name": "user navigates to \"Quotations\"",
+            "line": 22,
+            "name": "user navigates to Contacts module",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Quotations\"",
-                  "offset": 18
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 8165209381,
+              "duration": 4196621879,
               "status": "passed"
             },
-            "line": 9,
-            "name": "user select the \"select all checkbox\"",
+            "line": 23,
+            "name": "verify that message is displayed",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"select all checkbox\"",
-                  "offset": 16
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_select_the(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 620315140,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "all checkboxes are clicked",
-            "match": {
-              "location": "CRM_StepDefinitions.all_checkboxes_are_clicked()"
+              "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@select_all_checkbox"
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@Verify_message_isDisplayed"
           }
         ]
       }
     ],
-    "name": "Quotations Module Functionality",
+    "name": "Contacts page testing",
     "description": "",
-    "id": "quotations-module-functionality",
+    "id": "contacts-page-testing",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/crm_module/Quotations.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "tags": [
+      {
+        "name": "@contacts_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
