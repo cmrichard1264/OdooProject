@@ -6,7 +6,7 @@ import com.odoo.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class PosStepDefenitions {
+public class PosStepDefinitions {
 
     LoginPage loginPage  = new LoginPage();
 
