@@ -1,0 +1,111 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-07T02:03:13.234Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4481952981,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify that display",
+        "description": "",
+        "id": "contacts-page-testing;verify-that-display",
+        "after": [
+          {
+            "result": {
+              "duration": 115994596,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2521947925,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2116705419,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user logs in as inventory_manager",
+            "match": {
+              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3415506077,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user navigates to Contacts module",
+            "match": {
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4196621879,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "verify that message is displayed",
+            "match": {
+              "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@Verify_message_isDisplayed"
+          }
+        ]
+      }
+    ],
+    "name": "Contacts page testing",
+    "description": "",
+    "id": "contacts-page-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "tags": [
+      {
+        "name": "@contacts_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

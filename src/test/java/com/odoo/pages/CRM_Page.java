@@ -1,45 +1,42 @@
 package com.odoo.pages;
 
-public class CRM_Page {
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 public class CRM_Page extends BasePage {
 
-    @FindBy(css = "[data-menu='261']")
-    public WebElement crmModuleElement;
+    public WebDriverWait wait;
 
-    @FindBy (xpath = "//*[contains(text(), 'Pipeline - Odoo')]")
-    public WebElement crmPageTitleElement;
+    @FindBy(linkText = "CRM")
+    public WebElement crmModule;
 
-    @FindBy(css = "[type=\"submit\"]")
-    public WebElement login_Button_Element;
+    @FindBy(linkText = "Quotations")
+    public WebElement quotationsSubModule;
 
-    public void crmModuleClick(){
-        BrowserUtils.waitForClickablility(crmModuleElement, 10);
-        crmModuleElement.click();
+    @FindBy(xpath = "//table//tr//th[1]//div//input")
+    public WebElement quotationSelectAllCheckBox;
+
+    @FindBy(css = "[type=\"checkbox\"]")
+    public List<WebElement> quotationsAllCheckBoxes;
+
+
+    public void Wait(){
+        wait = new WebDriverWait(Driver.get(),10);
     }
 
-
-//    public String crmPageTitle(){
-//        return string;
-//    }
-
-    public String getPageTitle() {
-
-//        BrowserUtils.wait(3);
-//      String title = Driver.get().getTitle();
-//      return title;
-       // BrowserUtils.wait(3);
-       // BrowserUtils.waitForStaleElement(crmPageTitleElement);
-        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        String title = crmPageTitleElement.getText();
-        return title;
+    public void navigateToCrmModule() {
+//        wait.until(ExpectedConditions.visibilityOf(crmModule));
+//        wait.until(ExpectedConditions.elementToBeClickable(crmModule));
+        BrowserUtils.wait(2);
+        crmModule.click();
     }
 
 }
