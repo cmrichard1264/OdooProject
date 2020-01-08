@@ -1,24 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Pos_module/Pos.feature");
 formatter.feature({
-  "name": "Contacts page testing",
+  "name": "Pos page testing",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@contacts_page"
+      "name": "@Pos_page"
     }
   ]
 });
 formatter.scenario({
-  "name": "Verify that display",
+  "name": "verify that page limit is 16",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@contacts_page"
+      "name": "@Pos_page"
     },
     {
-      "name": "@Verify_message_isDisplayed"
+      "name": "@page_limit_is_16"
     }
   ]
 });
@@ -36,31 +36,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as inventory_manager",
+  "name": "user logs in as Pos manager",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "PosStepDefinitions.user_logs_in_as_Pos_manager()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
+  "name": "user navigates to Pos Module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "PosStepDefinitions.user_navigates_to_Pos_Module()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that message is displayed",
+  "name": "verify that page limit is 16",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
+  "location": "PosStepDefinitions.verify_that_page_limit_is(Integer)"
 });
 formatter.result({
   "status": "passed"
