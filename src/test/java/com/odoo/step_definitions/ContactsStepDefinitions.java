@@ -1,12 +1,12 @@
 package com.odoo.step_definitions;
 
 
-import com.odoo.pages.ContactsPage;
-import com.odoo.pages.LoginPage;
-import com.odoo.utilities.ConfigurationReader;
-import com.odoo.utilities.Driver;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+        import com.odoo.pages.ContactsPage;
+        import com.odoo.pages.LoginPage;
+        import com.odoo.utilities.ConfigurationReader;
+        import com.odoo.utilities.Driver;
+        import io.cucumber.java.en.Given;
+        import io.cucumber.java.en.Then;
 
 
 public class ContactsStepDefinitions {
@@ -40,8 +40,8 @@ public class ContactsStepDefinitions {
     public void user_creates_a_contact() {
         contactsPage.createContact();
         System.out.println("Contact created successfully!");
-    }
 
+    }
 
     @Then("verify that the top checkbox is clicked")
     public void verify_that_the_top_checkbox_is_clicked() {
@@ -49,5 +49,9 @@ public class ContactsStepDefinitions {
         System.out.println("Box is checked");
     }
 
-
+    @Then("verify that message is displayed")
+    public void verify_that_message_is_displayed() {
+        contactsPage.MessageIsDisplayed();
+        System.out.println("Message is displayed");
+    }
 }
