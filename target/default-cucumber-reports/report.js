@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Verify  that check box is clicked",
+  "name": "Verify that display",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -18,7 +18,7 @@ formatter.scenario({
       "name": "@contacts_page"
     },
     {
-      "name": "@Verify_checkbox_isClicked"
+      "name": "@Verify_message_isDisplayed"
     }
   ]
 });
@@ -56,11 +56,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that the top checkbox is clicked",
+  "name": "verify that message is displayed",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+  "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
 });
 formatter.result({
   "status": "passed"
