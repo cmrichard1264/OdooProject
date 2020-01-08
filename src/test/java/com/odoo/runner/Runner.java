@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
         dryRun = false,
-        tags = "@Verify_message_isDisplayed",
+        tags = "@page_limit_is_16",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"
         }
