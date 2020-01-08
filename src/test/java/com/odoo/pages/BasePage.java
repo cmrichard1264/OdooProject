@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
+
     @FindBy(css = "h1[class='oro-subtitle']")
     public WebElement pageTitle;
 
