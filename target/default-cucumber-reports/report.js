@@ -1,24 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/Quotations.feature");
 formatter.feature({
-  "name": "Contacts page testing",
+  "name": "Quotations Module Functionality",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verify  that check box is clicked",
+  "name": "Verify that that all checkboxes are clicked when user clicks at \u0027select all checkbox\u0027.",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@Verify_checkbox_isClicked"
+      "name": "@select_all_checkbox"
     }
   ]
 });
@@ -36,31 +28,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as inventory_manager",
-  "keyword": "And "
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
+  "name": "user navigates to \"CRM\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_navigates_to(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to \"Quotations\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "CRM_StepDefinitions.user_navigates_to(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that the top checkbox is clicked",
+  "name": "user select the \"select all checkbox\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_select_the(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "all checkboxes are clicked",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+  "location": "CRM_StepDefinitions.all_checkboxes_are_clicked()"
 });
 formatter.result({
   "status": "passed"

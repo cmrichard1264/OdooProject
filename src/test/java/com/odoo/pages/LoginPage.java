@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
 
+    @FindBy(css = "[type=\"submit\"]")
+    public WebElement loginButton;
+
     @FindBy(linkText = "Sign in")
     public WebElement sign_In_Element;
 
@@ -29,44 +32,57 @@ public class LoginPage extends BasePage{
 
     public void login(String role) {
         String userName = "";
-        String password = ConfigurationReader.getProperty("password");
+        String password = "";
+
 
         switch (role) {
-            case "contancts_user1":
+            case ("contancts_user1"):
                 userName = ConfigurationReader.getProperty("contacts1.username");
+                password = ConfigurationReader.getProperty("allcontacts.password");
                 break;
             case "contancts_user2":
                 userName = ConfigurationReader.getProperty("contacts2.username");
+                password = ConfigurationReader.getProperty("allcontacts.password");
                 break;
              case "contancts_user3":
                  userName = ConfigurationReader.getProperty("contacts3.username");
-                break;
+                 password = ConfigurationReader.getProperty("allcontacts.password");
+                 break;
              case "contancts_user4":
                 userName = ConfigurationReader.getProperty("contacts4.username");
-                break;
+                 password = ConfigurationReader.getProperty("allcontacts.password");
+                 break;
              case "contancts_user5":
                 userName = ConfigurationReader.getProperty("contacts5.username");
-                break;
+                 password = ConfigurationReader.getProperty("allcontacts.password");
+                 break;
             case "pos_user1":
                 userName = ConfigurationReader.getProperty("pos1.username");
+                password = ConfigurationReader.getProperty("all.pos.password");
                 break;
             case "pos_user2":
                 userName = ConfigurationReader.getProperty("pos2.username");
+                password = ConfigurationReader.getProperty("all.pos.password");
                 break;
             case "pos_user3":
                 userName = ConfigurationReader.getProperty("pos3.username");
+                password = ConfigurationReader.getProperty("all.pos.password");
                 break;
             case "pos_user4":
                 userName = ConfigurationReader.getProperty("pos4.username");
+                password = ConfigurationReader.getProperty("all.pos.password");
                 break;
             case "pos_user5":
                 userName = ConfigurationReader.getProperty("pos5.username");
+                password = ConfigurationReader.getProperty("all.pos.password");
                 break;
-            case "crm_user1":
-                userName = ConfigurationReader.getProperty("crm1.username");
+            case "eventscrmmanager1":
+                userName = ConfigurationReader.getProperty("eventscrmmanager1");
+                password = ConfigurationReader.getProperty("all.crm.password");
                 break;
-            case "crm_user2":
-                userName = ConfigurationReader.getProperty("crm2.username");
+            case "eventscrmmanager2":
+                userName = ConfigurationReader.getProperty("eventscrmmanager2");
+                password = ConfigurationReader.getProperty("all.crm.password");
                 break;
             default:
                 throw new RuntimeException("Invalid role!");
