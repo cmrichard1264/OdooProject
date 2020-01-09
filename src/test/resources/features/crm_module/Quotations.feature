@@ -1,5 +1,6 @@
 Feature: Quotations Module Functionality
 
+  #Enes
   @select_all_checkbox
   Scenario: Verify that that all checkboxes are clicked when user clicks at 'select all checkbox'.
     Given user is on the login page
