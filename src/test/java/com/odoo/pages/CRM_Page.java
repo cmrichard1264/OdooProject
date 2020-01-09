@@ -2,13 +2,9 @@ package com.odoo.pages;
 
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
-import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -28,7 +24,6 @@ public class CRM_Page extends BasePage {
 
     @FindBy(css = "[type=\"checkbox\"]")
     public List<WebElement> quotationsAllCheckBoxes;
-
 
     @FindBy(xpath = "//span[contains(text(), \"Leads & Opportunities\")]")
     public WebElement leadsTab;
