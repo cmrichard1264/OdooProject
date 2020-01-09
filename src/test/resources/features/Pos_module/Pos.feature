@@ -8,3 +8,7 @@ Feature:Pos page testing
     And user logs in as Pos manager
     Then user navigates to Pos Module
     And verify that page limit is 16
+
+
+
+   And verify that message is displayed
