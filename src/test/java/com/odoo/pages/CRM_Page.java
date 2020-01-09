@@ -2,7 +2,9 @@ package com.odoo.pages;
 
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
+import org.junit.Assert;
 import org.junit.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,28 +29,26 @@ public class CRM_Page extends BasePage {
     @FindBy(css = "[type=\"checkbox\"]")
     public List<WebElement> quotationsAllCheckBoxes;
 
-    @FindBy(xpath = "/html/body/nav/div[2]/ul[1]/li[5]/a/span")
 
-    public WebElement crmTab;
-
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[5]/ul[3]/li[3]/a/span")
-
+    @FindBy(xpath = "//span[contains(text(), \"Leads & Opportunities\")]")
     public WebElement leadsTab;
 
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[5]/ul[3]/li[3]/ul/li[1]/a/span")
+    @FindBy(xpath = "//span[contains(text(), \"Lead Tags\")]")
     public WebElement leadTagsTab;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
+    @FindBy(xpath = "//button[@accesskey=\"c\"]")
     public WebElement createButton;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/input")
-    public WebElement tagNameBox;
+    @FindBy(xpath = "//input[contains(@class, \"required_modifier\")]")
+    public WebElement tagNameInput;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/div[2]/button[1]")
+    @FindBy(xpath = "//button[@accesskey=\"s\"]")
     public WebElement saveButton;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/span")
+    @FindBy(xpath = "//span[@name=\"name\"]")
     public WebElement newTagName;
+
+
 
 
     public void Wait(){
@@ -61,5 +61,21 @@ public class CRM_Page extends BasePage {
         BrowserUtils.wait(2);
         crmModule.click();
     }
+
+    public void createNewTag(String newTag){
+        BrowserUtils.wait(2);
+        createButton.click();
+        BrowserUtils.wait(1);
+        tagNameInput.sendKeys(newTag);
+        saveButton.click();
+    }
+
+   public void deleteTag(){
+        Driver.get().findElement(By.xpath("//button[contains(text(), \"Action\")]")).click();
+        BrowserUtils.wait(1);
+        Driver.get().findElement(By.xpath("//a[contains(text(), \"Delete\")]")).click();
+        BrowserUtils.wait(1);
+        Driver.get().findElement(By.xpath("//button[@class=\"btn btn-sm btn-primary\"]")).click();
+   }
 
 }
