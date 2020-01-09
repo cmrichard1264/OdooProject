@@ -11,7 +11,3 @@ Feature:Pos page testing
 
 
 
-   And verify that message is displayed
-   svdbdfbfxbd
-   vdbdbd
-   bvdbd
