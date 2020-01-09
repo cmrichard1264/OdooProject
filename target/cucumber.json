@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-01-09T18:19:58.798Z",
+        "start_timestamp": "2020-01-09T18:49:18.833Z",
         "before": [
           {
             "result": {
-              "duration": 4517049600,
+              "duration": 5322989500,
               "status": "passed"
             },
             "match": {
@@ -16,13 +16,13 @@
           }
         ],
         "line": 6,
-        "name": "Create a new contact",
+        "name": "Creating new tag",
         "description": "",
-        "id": "contacts-page-testing;create-a-new-contact",
+        "id": "new-tag-testing;creating-new-tag",
         "after": [
           {
             "result": {
-              "duration": 780375300,
+              "duration": 908961000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1724737200,
+              "duration": 2039237400,
               "status": "passed"
             },
             "line": 7,
@@ -47,243 +47,129 @@
           },
           {
             "result": {
-              "duration": 2648805000,
+              "duration": 4867325700,
               "status": "passed"
             },
             "line": 8,
-            "name": "user logs in as inventory_manager",
+            "name": "user logs in as \"eventscrmmanager2\"",
             "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+              "arguments": [
+                {
+                  "val": "\"eventscrmmanager2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3402485500,
+              "duration": 2302873000,
               "status": "passed"
             },
             "line": 9,
-            "name": "user navigates to Contacts module",
+            "name": "user navigates to \"CRM\"",
             "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 8924324400,
+              "duration": 1615763600,
               "status": "passed"
             },
             "line": 10,
-            "name": "user creates a contact",
+            "name": "user goes to \"Lead Tags\" under \"Leads \u0026 Opportunities\" module",
             "match": {
-              "location": "ContactsStepDefinitions.user_creates_a_contact()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@create_a_contact"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-09T18:20:20.856Z",
-        "before": [
-          {
-            "result": {
-              "duration": 3269736500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 14,
-        "name": "Verify  that check box is clicked",
-        "description": "",
-        "id": "contacts-page-testing;verify--that-check-box-is-clicked",
-        "after": [
-          {
-            "result": {
-              "duration": 735983400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.teardown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1509260900,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "user is on the login page",
-            "match": {
-              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1883863500,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "user logs in as inventory_manager",
-            "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3207428300,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "user navigates to Contacts module",
-            "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+              "arguments": [
+                {
+                  "val": "\"Lead Tags\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"Leads \u0026 Opportunities\"",
+                  "offset": 31
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_goes_to_under_module(String,String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 4225208700,
+              "duration": 4307077000,
               "status": "passed"
             },
-            "line": 18,
-            "name": "verify that the top checkbox is clicked",
+            "line": 11,
+            "name": "user creates and saves a new tag \"New Cars\"",
             "match": {
-              "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+              "arguments": [
+                {
+                  "val": "\"New Cars\"",
+                  "offset": 33
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_creates_and_saves_a_new_tag(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1075159900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user verifies that message displayed is equal to \"New Cars\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New Cars\"",
+                  "offset": 49
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_verifies_that_message_displayed_is_equal_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2208091200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user deletes the tag \"New Cars\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New Cars\"",
+                  "offset": 21
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_deletes_the_tag(String)"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@Verify_checkbox_isClicked"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-09T18:20:35.691Z",
-        "before": [
-          {
-            "result": {
-              "duration": 3282516600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 22,
-        "name": "Verify that display",
-        "description": "",
-        "id": "contacts-page-testing;verify-that-display",
-        "after": [
-          {
-            "result": {
-              "duration": 811299100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.teardown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1452726200,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "user is on the login page",
-            "match": {
-              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1952460900,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user logs in as inventory_manager",
-            "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3232325500,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user navigates to Contacts module",
-            "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4318100200,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "verify that message is displayed",
-            "match": {
-              "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@Verify_message_isDisplayed"
+            "name": "@TestingNewTag"
           }
         ]
       }
     ],
-    "name": "Contacts page testing",
+    "name": "New Tag Testing",
     "description": "",
-    "id": "contacts-page-testing",
+    "id": "new-tag-testing",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
-    "tags": [
-      {
-        "name": "@contacts_page",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/crm_module/module.feature",
+    "tags": []
   }
 ]
