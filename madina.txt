@@ -2,3 +2,5 @@ madina
 madina 2
 madina 3
 suna madina practice
+creating a conflict in master
+creating a conflict in madina
