@@ -1,5 +1,5 @@
+Feature: New Tag Testing
 
-Feature: Lead Tags
 
   #Cihan
   @TestingNewTag
@@ -11,11 +11,3 @@ Feature: Lead Tags
     And user creates and saves a new tag "New Cars"
     And user verifies that message displayed is equal to "New Cars"
     And user deletes the tag "New Cars"
-
-
-   # And I click the lead tags tab
-   # And I click the create button
-  #  And I type "new cars"
-    #And I click save button
-    #Then the text should read "new cars"
-

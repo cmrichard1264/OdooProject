@@ -1,16 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/module.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
 formatter.feature({
-  "name": "Lead Tags",
+  "name": "Contacts page testing",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@contacts_page"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Creating new tag",
+  "name": "Create a new contact",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@TestingNewTag"
+      "name": "@contacts_page"
+    },
+    {
+      "name": "@create_a_contact"
     }
   ]
 });
@@ -28,61 +36,149 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as \"eventscrmmanager2\"",
+  "name": "user logs in as inventory_manager",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to Contacts module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+  "location": "ContactsStepDefinitions.user_navigates_to_module()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to \"CRM\"",
+  "name": "user creates a contact",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_navigates_to(String)"
+  "location": "ContactsStepDefinitions.user_creates_a_contact()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify  that check box is clicked",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@contacts_page"
+    },
+    {
+      "name": "@Verify_checkbox_isClicked"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user goes to \"Lead Tags\" under \"Leads \u0026 Opportunities\" module",
+  "name": "user logs in as inventory_manager",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to Contacts module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_goes_to_under_module(String,String)"
+  "location": "ContactsStepDefinitions.user_navigates_to_module()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates and saves a new tag \"New Cars\"",
+  "name": "verify that the top checkbox is clicked",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_creates_and_saves_a_new_tag(String)"
+  "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify that display",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@contacts_page"
+    },
+    {
+      "name": "@Verify_message_isDisplayed"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user verifies that message displayed is equal to \"New Cars\"",
+  "name": "user logs in as inventory_manager",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_verifies_that_message_displayed_is_equal_to(String)"
+  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user deletes the tag \"New Cars\"",
+  "name": "user navigates to Contacts module",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify that message is displayed",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_deletes_the_tag(String)"
+  "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
 });
 formatter.result({
   "status": "passed"
