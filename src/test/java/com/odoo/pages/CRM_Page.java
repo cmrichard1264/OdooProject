@@ -27,6 +27,29 @@ public class CRM_Page extends BasePage {
     @FindBy(css = "[type=\"checkbox\"]")
     public List<WebElement> quotationsAllCheckBoxes;
 
+    @FindBy(xpath = "/html/body/nav/div[2]/ul[1]/li[5]/a/span")
+
+    public WebElement crmTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[5]/ul[3]/li[3]/a/span")
+
+    public WebElement leadsTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[5]/ul[3]/li[3]/ul/li[1]/a/span")
+    public WebElement leadTagsTab;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
+    public WebElement createButton;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/input")
+    public WebElement tagNameBox;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/div[2]/button[1]")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/span")
+    public WebElement newTagName;
+
 
     public void Wait(){
         wait = new WebDriverWait(Driver.get(),10);
