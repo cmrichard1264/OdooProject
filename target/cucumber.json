@@ -1,13 +1,831 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-09T18:49:18.833Z",
+        "start_timestamp": "2020-01-09T20:33:27.126Z",
         "before": [
           {
             "result": {
-              "duration": 5322989500,
+              "duration": 4137910400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "verify that page limit is 16",
+        "description": "",
+        "id": "pos-page-testing;verify-that-page-limit-is-16",
+        "after": [
+          {
+            "result": {
+              "duration": 799446800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1365840100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1737474600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user logs in as Pos manager",
+            "match": {
+              "location": "PosStepDefinitions.user_logs_in_as_Pos_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4186624400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user navigates to Pos Module",
+            "match": {
+              "location": "PosStepDefinitions.user_navigates_to_Pos_Module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3024683000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify that page limit is 16",
+            "match": {
+              "arguments": [
+                {
+                  "val": "16",
+                  "offset": 26
+                }
+              ],
+              "location": "PosStepDefinitions.verify_that_page_limit_is(Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Pos_page"
+          },
+          {
+            "name": "@page_limit_is_16"
+          }
+        ]
+      }
+    ],
+    "name": "Pos page testing",
+    "description": "",
+    "id": "pos-page-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Pos_module/Pos.feature",
+    "tags": [
+      {
+        "name": "@Pos_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-09T20:33:42.430Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3236463500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Create a new contact",
+        "description": "",
+        "id": "contacts-page-testing;create-a-new-contact",
+        "after": [
+          {
+            "result": {
+              "duration": 793986600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1301632900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1931339800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user logs in as inventory_manager",
+            "match": {
+              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3184447400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user navigates to Contacts module",
+            "match": {
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9115903800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user creates a contact",
+            "match": {
+              "location": "ContactsStepDefinitions.user_creates_a_contact()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@create_a_contact"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-09T20:34:02.005Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3382222900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Verify  that check box is clicked",
+        "description": "",
+        "id": "contacts-page-testing;verify--that-check-box-is-clicked",
+        "after": [
+          {
+            "result": {
+              "duration": 706082700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1167124000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1491878700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user logs in as inventory_manager",
+            "match": {
+              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3305285800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user navigates to Contacts module",
+            "match": {
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4271037500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verify that the top checkbox is clicked",
+            "match": {
+              "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@Verify_checkbox_isClicked"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-09T20:34:16.332Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3233136600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Verify that display",
+        "description": "",
+        "id": "contacts-page-testing;verify-that-display",
+        "after": [
+          {
+            "result": {
+              "duration": 710495900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1235371200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1567875700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user logs in as inventory_manager",
+            "match": {
+              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3218886200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user navigates to Contacts module",
+            "match": {
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4319757100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "verify that message is displayed",
+            "match": {
+              "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@Verify_message_isDisplayed"
+          }
+        ]
+      }
+    ],
+    "name": "Contacts page testing",
+    "description": "",
+    "id": "contacts-page-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "tags": [
+      {
+        "name": "@contacts_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-09T20:34:30.623Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3267646800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Verify that create an opportunity when click the create button.",
+        "description": "",
+        "id": "pipeline-module-functionality;verify-that-create-an-opportunity-when-click-the-create-button.;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 719493000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1168041100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3687944200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user logs in as \"eventscrmmanager2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"eventscrmmanager2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2167033900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigates to \"CRM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1316028900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user click to Create button",
+            "match": {
+              "location": "CRM_StepDefinitions.user_click_to_Create_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1098573700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify that \"Create an Opportunity\" module-title display",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create an Opportunity\"",
+                  "offset": 12
+                }
+              ],
+              "location": "CRM_StepDefinitions.verify_that_module_title_display(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 380531500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity #4\"",
+                  "offset": 36
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2164044200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enter customer name in the \"Ibr\" box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ibr\"",
+                  "offset": 32
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 127191200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "verify that \"Create a Customer\" second module-title display",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create a Customer\"",
+                  "offset": 12
+                }
+              ],
+              "location": "CRM_StepDefinitions.verifyThatSecondModuleTitleDisplay(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 92060900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user click Create button on the Create a Customer module",
+            "match": {
+              "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142699900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user clear the expected revenue box",
+            "match": {
+              "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 100619700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enter amount in \"2500\" box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2500\"",
+                  "offset": 21
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51731600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user pick the priority",
+            "match": {
+              "location": "CRM_StepDefinitions.user_pick_the_priority()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 54333500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user click the \"Create\" button.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create\"",
+                  "offset": 15
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_click_the_button(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6107188300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify that \"Opportunity #4\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity #4\"",
+                  "offset": 12
+                }
+              ],
+              "location": "CRM_StepDefinitions.verify_that_displayed(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PipelineTest1"
+          }
+        ]
+      }
+    ],
+    "name": "Pipeline Module Functionality",
+    "description": "",
+    "id": "pipeline-module-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/crm_module/Pipeline.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-09T20:34:53.279Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3228149100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Verify that that all checkboxes are clicked when user clicks at \u0027select all checkbox\u0027.",
+        "description": "",
+        "id": "quotations-module-functionality;verify-that-that-all-checkboxes-are-clicked-when-user-clicks-at--select-all-checkbox-.",
+        "after": [
+          {
+            "result": {
+              "duration": 693404200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1196553000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3547009300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user logs in as \"eventscrmmanager2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"eventscrmmanager2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2184790100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigates to \"CRM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2840602300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user navigates to \"Quotations\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Quotations\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8136101800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user select the \"select all checkbox\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select all checkbox\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_select_the(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 862308400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "all checkboxes are clicked",
+            "match": {
+              "location": "CRM_StepDefinitions.all_checkboxes_are_clicked()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@select_all_checkbox"
+          }
+        ]
+      }
+    ],
+    "name": "Quotations Module Functionality",
+    "description": "",
+    "id": "quotations-module-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/crm_module/Quotations.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-09T20:35:15.976Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3233754800,
               "status": "passed"
             },
             "match": {
@@ -22,7 +840,7 @@
         "after": [
           {
             "result": {
-              "duration": 908961000,
+              "duration": 690925500,
               "status": "passed"
             },
             "match": {
@@ -35,7 +853,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2039237400,
+              "duration": 1132999900,
               "status": "passed"
             },
             "line": 7,
@@ -47,7 +865,7 @@
           },
           {
             "result": {
-              "duration": 4867325700,
+              "duration": 3911847100,
               "status": "passed"
             },
             "line": 8,
@@ -65,7 +883,7 @@
           },
           {
             "result": {
-              "duration": 2302873000,
+              "duration": 2204036600,
               "status": "passed"
             },
             "line": 9,
@@ -83,7 +901,7 @@
           },
           {
             "result": {
-              "duration": 1615763600,
+              "duration": 1342671900,
               "status": "passed"
             },
             "line": 10,
@@ -105,7 +923,7 @@
           },
           {
             "result": {
-              "duration": 4307077000,
+              "duration": 4192323200,
               "status": "passed"
             },
             "line": 11,
@@ -123,7 +941,7 @@
           },
           {
             "result": {
-              "duration": 1075159900,
+              "duration": 1037185800,
               "status": "passed"
             },
             "line": 12,
@@ -141,7 +959,7 @@
           },
           {
             "result": {
-              "duration": 2208091200,
+              "duration": 2159719300,
               "status": "passed"
             },
             "line": 13,
