@@ -3,6 +3,7 @@ package com.odoo.step_definitions;
 import com.odoo.pages.CRM_Page;
 import com.odoo.pages.LoginPage;
 import com.odoo.utilities.BrowserUtils;
+import com.odoo.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -23,6 +24,7 @@ public class CRM_StepDefinitions {
     public WebDriver driver;
 
     //##################################################################################################################
+
 //      Feature: Quotations Module Functionality
 //      Scenario: Verify that that all checkboxes are clicked when user clicks at 'select all checkbox'.
 //      By Noah Adams
@@ -65,17 +67,72 @@ public class CRM_StepDefinitions {
     }
     //##################################################################################################################
 
+    // Feature: Pipeline Module Functionality
+    //  Scenario Outline: Verify that create an opportunity when click the create button.
+    //  Created by: Ibrahim Yazar 01/08/2020
+    @Then("user click to Create button")
+    public void user_click_to_Create_button() {
+    crm_page.clickCreateButtonPipelinePage();
+    }
 
+    @Then("verify that {string} module-title display")
+    public void verify_that_module_title_display(String string) {
+    String actualResult = crm_page.createAnOpportunity_modal_Title();
+        System.out.println("Modul-Title is: " + actualResult);
+    Assert.assertEquals(string, actualResult);
 
+    }
 
+    @Then("user enter Opportunity Title in the {string} Title box")
+    public void user_enter_Opportunity_Title_in_the_Title_box(String string) {
+    crm_page.opportunityBox(string);
+    }
 
+    @When("user enter customer name in the {string} box")
+    public void user_enter_customer_name_in_the_box(String string) {
+    crm_page.EnterCustomerName(string);
+    }
 
+    @Then("verify that {string} second module-title display")
+    public void verifyThatSecondModuleTitleDisplay(String string) {
+        String moduleTitle = crm_page.CreateCustomerModuleTitle();
+        System.out.println("Module title is: " + moduleTitle);
+        Assert.assertEquals(string, moduleTitle);
+    }
 
+    @Then("user click Create button on the Create a Customer module")
+    public void user_click_Create_button_on_the_Create_a_Customer_module() {
+    crm_page.createButtonOnCreateCustomerPage();
+    }
 
+    @Then("user clear the expected revenue box")
+    public void user_clear_the_expected_revenue_box() {
+    crm_page.clearRevenueBox();
+    }
 
+    @Then("user enter amount in {string} box")
+    public void user_enter_amount_in_box(String string) {
+    crm_page.enterAmountInRevenueBox(string);
+    }
 
+    @Then("user pick the priority")
+    public void user_pick_the_priority() {
+    crm_page.selectPriority();
+    }
 
+    @Then("user click the {string} button.")
+    public void user_click_the_button(String string) {
+    crm_page.clickCreateButton();
 
+    }
+
+    @Then("verify that {string} displayed")
+    public void verify_that_displayed(String string) {
+        Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Driver.get().navigate().refresh();
+        System.out.println("verify: " + crm_page.verifyNewOpportunity());
+    Assert.assertEquals(string,crm_page.verifyNewOpportunity());
+    }
 
 
 

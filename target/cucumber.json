@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-01-08T11:08:24.782Z",
+        "start_timestamp": "2020-01-09T06:13:50.414Z",
         "before": [
           {
             "result": {
-              "duration": 4079304880,
+              "duration": 2277362506,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "verify that page limit is 16",
+        "line": 22,
+        "name": "Verify that create an opportunity when click the create button.",
         "description": "",
-        "id": "pos-page-testing;verify-that-page-limit-is-16",
+        "id": "pipeline-module-functionality;verify-that-create-an-opportunity-when-click-the-create-button.;;2",
         "after": [
           {
             "result": {
-              "duration": 109205157,
+              "duration": 105515894,
               "status": "passed"
             },
             "match": {
@@ -31,11 +31,11 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3250590719,
+              "duration": 2193518029,
               "status": "passed"
             },
             "line": 6,
@@ -47,71 +47,227 @@
           },
           {
             "result": {
-              "duration": 5521981504,
+              "duration": 3899510780,
               "status": "passed"
             },
             "line": 7,
-            "name": "user logs in as Pos manager",
+            "name": "user logs in as \"eventscrmmanager2\"",
             "match": {
-              "location": "PosStepDefinitions.user_logs_in_as_Pos_manager()"
+              "arguments": [
+                {
+                  "val": "\"eventscrmmanager2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2158672934,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigates to \"CRM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4085260909,
+              "duration": 1882277167,
               "status": "passed"
             },
-            "line": 8,
-            "name": "user navigates to Pos Module",
+            "line": 9,
+            "name": "user click to Create button",
             "match": {
-              "location": "PosStepDefinitions.user_navigates_to_Pos_Module()"
+              "location": "CRM_StepDefinitions.user_click_to_Create_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3043685027,
+              "duration": 1332316003,
               "status": "passed"
             },
-            "line": 9,
-            "name": "verify that page limit is 16",
+            "line": 10,
+            "name": "verify that \"Create an Opportunity\" module-title display",
             "match": {
               "arguments": [
                 {
-                  "val": "16",
-                  "offset": 26
+                  "val": "\"Create an Opportunity\"",
+                  "offset": 12
                 }
               ],
-              "location": "PosStepDefinitions.verify_that_page_limit_is(Integer)"
+              "location": "CRM_StepDefinitions.verify_that_module_title_display(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 294636535,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity #4\"",
+                  "offset": 36
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2157001800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enter customer name in the \"Ibr\" box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ibr\"",
+                  "offset": 32
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 91922723,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "verify that \"Create a Customer\" second module-title display",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create a Customer\"",
+                  "offset": 12
+                }
+              ],
+              "location": "CRM_StepDefinitions.verifyThatSecondModuleTitleDisplay(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 65262766,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user click Create button on the Create a Customer module",
+            "match": {
+              "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93995869,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user clear the expected revenue box",
+            "match": {
+              "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 116589663,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enter amount in \"2500\" box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2500\"",
+                  "offset": 21
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39003239,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user pick the priority",
+            "match": {
+              "location": "CRM_StepDefinitions.user_pick_the_priority()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 69653492,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user click the \"Create\" button.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create\"",
+                  "offset": 15
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_click_the_button(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6489748260,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify that \"Opportunity #4\" displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity #4\"",
+                  "offset": 12
+                }
+              ],
+              "location": "CRM_StepDefinitions.verify_that_displayed(String)"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@Pos_page"
-          },
-          {
-            "name": "@page_limit_is_16"
+            "name": "@PipelineTest1"
           }
         ]
       }
     ],
-    "name": "Pos page testing",
+    "name": "Pipeline Module Functionality",
     "description": "",
-    "id": "pos-page-testing",
+    "id": "pipeline-module-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Pos_module/Pos.feature",
-    "tags": [
-      {
-        "name": "@Pos_page",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/crm_module/Pipeline.feature",
+    "tags": []
   }
 ]
