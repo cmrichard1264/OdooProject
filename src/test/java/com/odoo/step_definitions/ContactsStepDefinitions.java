@@ -54,4 +54,5 @@ public class ContactsStepDefinitions {
         contactsPage.MessageIsDisplayed();
         System.out.println("Message is displayed");
     }
+
 }
