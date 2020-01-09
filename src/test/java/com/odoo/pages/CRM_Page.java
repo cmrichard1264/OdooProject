@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class CRM_Page extends BasePage {
 
@@ -26,6 +27,39 @@ public class CRM_Page extends BasePage {
 
     @FindBy(css = "[type=\"checkbox\"]")
     public List<WebElement> quotationsAllCheckBoxes;
+
+    @FindBy (css = "[ class = 'btn btn-primary btn-sm o-kanban-button-new']")
+    public WebElement createButtonPipelineElement;
+
+    @FindBy(xpath = "//*[text()='Create an Opportunity']")
+    public WebElement createAnOpportunitymodal_TitleElement;
+
+    @FindBy (css = "[placeholder='e.g. Customer Deal']")
+    public WebElement opportinityBoxElement;
+
+    @FindBy (xpath = "//input [@class='o_input ui-autocomplete-input'][1]")
+    public WebElement costumerNameBoxElemnet;
+
+    @FindBy (css = "[class='o_form_sheet']")
+    public WebElement clickEmptySpaceElement;
+
+    @FindBy (xpath = "//*[text() = 'Create a Customer']")
+    public WebElement customer_Module_Title_Element;
+
+    @FindBy (xpath = "//button[@ class = 'btn btn-sm btn-primary'][@type = 'button'][span='Create']")   // @FindBy(css = "[name ='close_dialog']")
+    public WebElement createButtonOnCreateOpportunityPage;
+
+    @FindBy (css = "[class='o_field_float o_field_number o_field_widget o_input']")
+    public WebElement revenueboxElement;
+
+    @FindBy(css = "[class='o_form_sheet']")
+    public WebElement priorityElement;
+
+    @FindBy(xpath = "// button [@class='btn btn-sm btn-primary'][span='Create']")
+    public WebElement lastcreateButton;
+
+    @FindBy (xpath = "//*[text() ='Opportunity #4']")
+    public WebElement verifyNewOppotunityElement;
 
     @FindBy(xpath = "/html/body/nav/div[2]/ul[1]/li[5]/a/span")
 
@@ -62,4 +96,66 @@ public class CRM_Page extends BasePage {
         crmModule.click();
     }
 
+    public void clickCreateButtonPipelinePage(){
+        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        createButtonPipelineElement.click();
+    }
+
+    public String createAnOpportunity_modal_Title(){
+       // wait.until(ExpectedConditions.visibilityOf(createAnOpportunitymodal_TitleElement));
+        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      return  createAnOpportunitymodal_TitleElement.getText();
+    }
+
+    //user enter Opportunity Title in the Opportunity Title box
+    public void opportunityBox(String Opportunity){
+        opportinityBoxElement.sendKeys(Opportunity);
+    }
+
+    //user enter customer name in the {string} box
+    public void EnterCustomerName(String Customer){
+        Driver.get().manage().timeouts().implicitlyWait(7,TimeUnit.SECONDS);
+        costumerNameBoxElemnet.click();
+        BrowserUtils.wait(2);
+        costumerNameBoxElemnet.sendKeys(Customer);
+    }
+
+    //verify that "Create a Customer" module-title display
+    public String CreateCustomerModuleTitle(){
+        clickEmptySpaceElement.click();
+        Driver.get().manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+      return customer_Module_Title_Element.getText();
+    }
+
+    //user click Create button on the Create a Customer module
+    public void createButtonOnCreateCustomerPage(){
+        createButtonOnCreateOpportunityPage.click();
+    }
+    //user clear the expected revenue box
+    public void clearRevenueBox(){
+        revenueboxElement.click();
+        revenueboxElement.clear();
+
+    }
+
+    //user enter amount in {string} box
+    public void enterAmountInRevenueBox(String string){
+        revenueboxElement.sendKeys(string);
+    }
+
+    //user pick the priority
+    public void selectPriority(){
+        priorityElement.click();
+    }
+
+    //user click the {string} button.
+    public void clickCreateButton(){
+        lastcreateButton.click();
+    }
+
+    // verify that {string} displayed
+    public String verifyNewOpportunity(){
+        BrowserUtils.wait(3);
+       return verifyNewOppotunityElement.getText();
+    }
 }
