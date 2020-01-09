@@ -12,3 +12,6 @@ Feature:Pos page testing
 
 
    And verify that message is displayed
+   
+   And verify that {string} module-title display
+
