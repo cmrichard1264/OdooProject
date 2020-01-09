@@ -34,7 +34,7 @@ public class CRM_StepDefinitions {
 
     @When("user logs in as {string}")
     public void user_logs_in_as(String string) {
-       loginPage.login(string);
+        loginPage.login(string);
         BrowserUtils.wait(2);
     }
 
@@ -59,11 +59,11 @@ public class CRM_StepDefinitions {
     public void all_checkboxes_are_clicked() {
         int count = 0;
         List<WebElement> allCheckBoxes = crm_page.quotationsAllCheckBoxes;
-       // BrowserUtils.wait(3);
-        for(WebElement each: allCheckBoxes){
-            if(each.isSelected()){
+        // BrowserUtils.wait(3);
+        for (WebElement each : allCheckBoxes) {
+            if (each.isSelected()) {
                 count++;
-                System.out.println(count+"nth checkbox is checked!");
+                System.out.println(count + "nth checkbox is checked!");
             }
 
         }
@@ -75,25 +75,25 @@ public class CRM_StepDefinitions {
     //  Created by: Ibrahim Yazar 01/08/2020
     @Then("user click to Create button")
     public void user_click_to_Create_button() {
-    crm_page.clickCreateButtonPipelinePage();
+        crm_page.clickCreateButtonPipelinePage();
     }
 
     @Then("verify that {string} module-title display")
     public void verify_that_module_title_display(String string) {
-    String actualResult = crm_page.createAnOpportunity_modal_Title();
+        String actualResult = crm_page.createAnOpportunity_modal_Title();
         System.out.println("Modul-Title is: " + actualResult);
-    Assert.assertEquals(string, actualResult);
+        Assert.assertEquals(string, actualResult);
 
     }
 
     @Then("user enter Opportunity Title in the {string} Title box")
     public void user_enter_Opportunity_Title_in_the_Title_box(String string) {
-    crm_page.opportunityBox(string);
+        crm_page.opportunityBox(string);
     }
 
     @When("user enter customer name in the {string} box")
     public void user_enter_customer_name_in_the_box(String string) {
-    crm_page.EnterCustomerName(string);
+        crm_page.EnterCustomerName(string);
     }
 
     @Then("verify that {string} second module-title display")
@@ -102,6 +102,7 @@ public class CRM_StepDefinitions {
         System.out.println("Module title is: " + moduleTitle);
         Assert.assertEquals(string, moduleTitle);
     }
+
     @Given("I am on the login page")
     public void i_am_on_the_login_page() {
         Driver.get().get(ConfigurationReader.getProperty("url"));
@@ -135,8 +136,9 @@ public class CRM_StepDefinitions {
 
     @Then("user click Create button on the Create a Customer module")
     public void user_click_Create_button_on_the_Create_a_Customer_module() {
-    crm_page.createButtonOnCreateCustomerPage();
+        crm_page.createButtonOnCreateCustomerPage();
     }
+
     @When("I click the lead tags tab")
     public void i_click_the_lead_tags_tab() {
         crm_page.leadTagsTab.click();
@@ -144,8 +146,9 @@ public class CRM_StepDefinitions {
 
     @Then("user clear the expected revenue box")
     public void user_clear_the_expected_revenue_box() {
-    crm_page.clearRevenueBox();
+        crm_page.clearRevenueBox();
     }
+
     @When("I click the create button")
     public void i_click_the_create_button() {
         BrowserUtils.wait(3);
@@ -154,8 +157,9 @@ public class CRM_StepDefinitions {
 
     @Then("user enter amount in {string} box")
     public void user_enter_amount_in_box(String string) {
-    crm_page.enterAmountInRevenueBox(string);
+        crm_page.enterAmountInRevenueBox(string);
     }
+
     @When("I type {string}")
     public void i_type(String string) {
         BrowserUtils.wait(3);
@@ -164,8 +168,9 @@ public class CRM_StepDefinitions {
 
     @Then("user pick the priority")
     public void user_pick_the_priority() {
-    crm_page.selectPriority();
+        crm_page.selectPriority();
     }
+
     @When("I click save button")
     public void i_click_save_button() {
         crm_page.saveButton.click();
@@ -173,29 +178,26 @@ public class CRM_StepDefinitions {
 
     @Then("user click the {string} button.")
     public void user_click_the_button(String string) {
-    crm_page.clickCreateButton();
+        crm_page.clickCreateButton();
+    }
     @Then("the text should read {string}")
     public void the_text_should_read(String string) {
+            String newTagText = crm_page.newTagName.getText();
+            System.out.println("text: " + newTagText );
+            BrowserUtils.wait(3);
+            Assert.assertEquals(string, newTagText);
+        }
+
+
+        @Then("verify that {string} displayed")
+        public void verify_that_displayed (String string){
+            Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            Driver.get().navigate().refresh();
+            System.out.println("verify: " + crm_page.verifyNewOpportunity());
+            Assert.assertEquals(string, crm_page.verifyNewOpportunity());
+        }
 
     }
-
-    @Then("verify that {string} displayed")
-    public void verify_that_displayed(String string) {
-        Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Driver.get().navigate().refresh();
-        System.out.println("verify: " + crm_page.verifyNewOpportunity());
-    Assert.assertEquals(string,crm_page.verifyNewOpportunity());
-    }
-        String newTagText = crm_page.newTagName.getText();
-        System.out.println("text: " + newTagText );
-
-        BrowserUtils.wait(3);
-        Assert.assertEquals(string, newTagText);
-    }
-
-
-
-}
 
 
 
