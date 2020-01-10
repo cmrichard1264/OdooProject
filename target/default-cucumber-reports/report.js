@@ -1,24 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Pos_module/Pos.feature");
 formatter.feature({
-  "name": "Contacts page testing",
+  "name": "Pos page testing",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@contacts_page"
+      "name": "@Pos_page"
     }
   ]
 });
 formatter.scenario({
-  "name": "Create a new contact",
+  "name": "verify that configure message displayed",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@contacts_page"
+      "name": "@Pos_page"
     },
     {
-      "name": "@create_a_contact"
+      "name": "@configure_message"
     }
   ]
 });
@@ -36,149 +36,41 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as inventory_manager",
+  "name": "userlogs in as pos_manager",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "PosStepDefinitions.userlogs_in_as_pos_manager()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
+  "name": "user navigates to POS module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "PosStepDefinitions.user_navigates_to_POS_module()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates a contact",
+  "name": "user types into search box",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_creates_a_contact()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify  that check box is clicked",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@Verify_checkbox_isClicked"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+  "location": "PosStepDefinitions.user_types_into_search_box()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as inventory_manager",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user navigates to Contacts module",
+  "name": "verify that configure message displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "verify that the top checkbox is clicked",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify that display",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@Verify_message_isDisplayed"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in as inventory_manager",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user navigates to Contacts module",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "verify that message is displayed",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
+  "location": "PosStepDefinitions.verify_that_configure_message_displayed()"
 });
 formatter.result({
   "status": "passed"

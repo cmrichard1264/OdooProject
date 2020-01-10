@@ -3,100 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-09T18:19:58.798Z",
+        "start_timestamp": "2020-01-10T04:05:06.451Z",
         "before": [
           {
             "result": {
-              "duration": 4517049600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 6,
-        "name": "Create a new contact",
-        "description": "",
-        "id": "contacts-page-testing;create-a-new-contact",
-        "after": [
-          {
-            "result": {
-              "duration": 780375300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.teardown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1724737200,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user is on the login page",
-            "match": {
-              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2648805000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user logs in as inventory_manager",
-            "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3402485500,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user navigates to Contacts module",
-            "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 8924324400,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user creates a contact",
-            "match": {
-              "location": "ContactsStepDefinitions.user_creates_a_contact()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@create_a_contact"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-09T18:20:20.856Z",
-        "before": [
-          {
-            "result": {
-              "duration": 3269736500,
+              "duration": 1649858948,
               "status": "passed"
             },
             "match": {
@@ -105,13 +16,13 @@
           }
         ],
         "line": 14,
-        "name": "Verify  that check box is clicked",
+        "name": "verify that configure message displayed",
         "description": "",
-        "id": "contacts-page-testing;verify--that-check-box-is-clicked",
+        "id": "pos-page-testing;verify-that-configure-message-displayed",
         "after": [
           {
             "result": {
-              "duration": 735983400,
+              "duration": 78627366,
               "status": "passed"
             },
             "match": {
@@ -124,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1509260900,
+              "duration": 1356719626,
               "status": "passed"
             },
             "line": 15,
@@ -136,148 +47,71 @@
           },
           {
             "result": {
-              "duration": 1883863500,
+              "duration": 1517780256,
               "status": "passed"
             },
             "line": 16,
-            "name": "user logs in as inventory_manager",
+            "name": "userlogs in as pos_manager",
             "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+              "location": "PosStepDefinitions.userlogs_in_as_pos_manager()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3207428300,
+              "duration": 4064173853,
               "status": "passed"
             },
             "line": 17,
-            "name": "user navigates to Contacts module",
+            "name": "user navigates to POS module",
             "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+              "location": "PosStepDefinitions.user_navigates_to_POS_module()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 4225208700,
+              "duration": 4074300567,
               "status": "passed"
             },
             "line": 18,
-            "name": "verify that the top checkbox is clicked",
+            "name": "user types into search box",
             "match": {
-              "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@Verify_checkbox_isClicked"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-09T18:20:35.691Z",
-        "before": [
-          {
-            "result": {
-              "duration": 3282516600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 22,
-        "name": "Verify that display",
-        "description": "",
-        "id": "contacts-page-testing;verify-that-display",
-        "after": [
-          {
-            "result": {
-              "duration": 811299100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.teardown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1452726200,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "user is on the login page",
-            "match": {
-              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1952460900,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user logs in as inventory_manager",
-            "match": {
-              "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+              "location": "PosStepDefinitions.user_types_into_search_box()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3232325500,
+              "duration": 6105913849,
               "status": "passed"
             },
-            "line": 25,
-            "name": "user navigates to Contacts module",
+            "line": 19,
+            "name": "verify that configure message displayed",
             "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+              "location": "PosStepDefinitions.verify_that_configure_message_displayed()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4318100200,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "verify that message is displayed",
-            "match": {
-              "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@contacts_page"
+            "name": "@Pos_page"
           },
           {
-            "name": "@Verify_message_isDisplayed"
+            "name": "@configure_message"
           }
         ]
       }
     ],
-    "name": "Contacts page testing",
+    "name": "Pos page testing",
     "description": "",
-    "id": "contacts-page-testing",
+    "id": "pos-page-testing",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "uri": "file:src/test/resources/features/Pos_module/Pos.feature",
     "tags": [
       {
-        "name": "@contacts_page",
+        "name": "@Pos_page",
         "type": "Tag",
         "location": {
           "line": 1,
