@@ -1,11 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/Quotations.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
 formatter.feature({
-  "name": "Quotations Module Functionality",
+  "name": "Contacts page testing",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@contacts_page"
+    }
+  ]
 });
 formatter.background({
-  "name": "user logs in as a eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
+  "name": "user is on the login page",
   "description": "",
   "keyword": "Background"
 });
@@ -22,9 +27,22 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Delete a contact",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@contacts_page"
+    },
+    {
+      "name": "@delete_a_contact"
+    }
+  ]
+});
 formatter.step({
-  "name": "user logs in as \"eventscrmmanager2\"",
-  "keyword": "When "
+  "name": "user logs in as \"pos1\"",
+  "keyword": "Given "
 });
 formatter.match({
   "location": "CRM_StepDefinitions.user_logs_in_as(String)"
@@ -33,41 +51,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to \"CRM\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_navigates_to(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user navigates to \"Quotations\"",
+  "name": "user navigates to Contacts module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_navigates_to(String)"
+  "location": "ContactsStepDefinitions.user_navigates_to_module()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Verify that \"List\", \"Kanban\", \"Calendar\", \"Pivot\" and \"Graph\" buttons are functioning",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@Five_Buttons"
-    }
-  ]
-});
 formatter.step({
-  "name": "user clicks at five \"buttons\" in order List, Kanban, Calendar, Pivot and Graph",
-  "keyword": "And "
+  "name": "search and delete \"Dzhamol\" contact",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_clicks_at_five_in_order_List_Kanban_Calendar_Pivot_and_Graph(String)"
+  "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
 });
 formatter.result({
   "status": "passed"

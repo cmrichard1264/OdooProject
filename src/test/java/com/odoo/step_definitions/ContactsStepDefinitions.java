@@ -3,16 +3,21 @@ package com.odoo.step_definitions;
 
         import com.odoo.pages.ContactsPage;
         import com.odoo.pages.LoginPage;
+        import com.odoo.utilities.BrowserUtils;
         import com.odoo.utilities.ConfigurationReader;
         import com.odoo.utilities.Driver;
         import io.cucumber.java.en.Given;
         import io.cucumber.java.en.Then;
+        import io.cucumber.java.en.When;
 
 
 public class ContactsStepDefinitions {
 
     LoginPage loginPage = new LoginPage();//created a login page object
     ContactsPage contactsPage = new ContactsPage();
+
+
+
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
@@ -40,6 +45,12 @@ public class ContactsStepDefinitions {
     public void user_creates_a_contact() {
         contactsPage.createContact();
         System.out.println("Contact created successfully!");
+    }
+
+    @Then("search and delete {string} contact")
+    public void search_and_delete_contact(String contact) {
+        contactsPage.deleteContact(contact);
+        System.out.println(contact+" successfully deleted!  ");
 
     }
 
@@ -54,5 +65,6 @@ public class ContactsStepDefinitions {
         contactsPage.MessageIsDisplayed();
         System.out.println("Message is displayed");
     }
+
 
 }

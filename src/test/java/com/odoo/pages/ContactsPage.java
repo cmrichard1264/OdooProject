@@ -53,6 +53,19 @@ public class ContactsPage extends BasePage {
     @FindBy(xpath = "//p[contains(text(), \"Click to add a contact in your contacts directory.\")]")
     public WebElement Message;
 
+    @FindBy(xpath = "//tr/th/div/input")
+    public WebElement selectAllCheckBox;
+
+    @FindBy(xpath = "//button[contains(text(), \"Action\")]")
+    public WebElement actionButton;
+
+    @FindBy(xpath = "//a[contains(text(), \"Delete\")]")
+    public WebElement actionDelete;
+
+    @FindBy(xpath = "//button[@class=\"btn btn-sm btn-primary\"]")
+    public WebElement deleteOK;
+
+
 
     public void createContact() {
         BrowserUtils.wait(1);
@@ -89,6 +102,22 @@ public class ContactsPage extends BasePage {
         Search.sendKeys("Aijamal", Keys.ENTER);
         BrowserUtils.wait(2);
         Assert.assertTrue(Message.isDisplayed());
+    }
+
+    public void deleteContact(String contact){
+        BrowserUtils.wait(2);
+        Search.sendKeys(contact, Keys.ENTER);
+        BrowserUtils.wait(2);
+        List.click();
+        BrowserUtils.wait(1);
+        selectAllCheckBox.click();
+        BrowserUtils.wait(1);
+        actionButton.click();
+        BrowserUtils.wait(1);
+        actionDelete.click();
+        BrowserUtils.wait(1);
+        deleteOK.click();
+        BrowserUtils.wait(1);
     }
 
 
