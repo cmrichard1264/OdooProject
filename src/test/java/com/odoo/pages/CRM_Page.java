@@ -2,6 +2,7 @@ package com.odoo.pages;
 
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
+import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,10 +11,29 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class CRM_Page extends BasePage {
+
+    //Five Buttons##########
+
+    @FindBy(css = "[data-original-title=\"List\"]")
+    public WebElement list;
+
+    @FindBy(css = "[data-original-title=\"Kanban\"]")
+    public WebElement kanban;
+
+    @FindBy(css = "[data-original-title=\"Calendar\"]")
+    public WebElement calendar;
+
+    @FindBy(css = "[data-original-title=\"Pivot\"]")
+    public WebElement pivot;
+
+    @FindBy(css = "[data-original-title=\"Graph\"]")
+    public WebElement graph;
+
+    //######################
 
     public WebDriverWait wait;
 
@@ -87,6 +107,16 @@ public class CRM_Page extends BasePage {
     }
 
 
+    public void quotationsFiveButtons() {
+        List<WebElement> fiveButtons = new ArrayList<WebElement>(Arrays.asList(list, kanban, calendar, pivot, graph));
+
+        for(WebElement eachButton: fiveButtons){
+            eachButton.click();
+            Assert.assertTrue("This button is not displayed!",eachButton.isDisplayed());
+           //BrowserUtils.wait(1);
+        }
+
+    }
 
 
 
