@@ -1,18 +1,18 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/module.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
 formatter.feature({
-  "name": "New Tag Testing",
+  "name": "Contacts page testing",
   "description": "",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Creating new tag",
-  "description": "",
-  "keyword": "Scenario",
+  "keyword": "Feature",
   "tags": [
     {
-      "name": "@TestingNewTag"
+      "name": "@contacts_page"
     }
   ]
+});
+formatter.background({
+  "name": "user is on the login page",
+  "description": "",
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -27,68 +27,49 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Delete a contact",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@contacts_page"
+    },
+    {
+      "name": "@delete_a_contact"
+    }
+  ]
+});
 formatter.step({
-  "name": "user logs in as \"eventscrmmanager2\"",
-  "keyword": "Then "
+  "name": "user logs in as \"pos1\"",
+  "keyword": "Given "
 });
 formatter.match({
   "location": "CRM_StepDefinitions.user_logs_in_as(String)"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat com.odoo.pages.LoginPage.login(LoginPage.java:23)\r\n\tat com.odoo.pages.LoginPage.login(LoginPage.java:90)\r\n\tat com.odoo.step_definitions.CRM_StepDefinitions.user_logs_in_as(CRM_StepDefinitions.java:37)\r\n\tat ✽.user logs in as \"eventscrmmanager2\"(file:src/test/resources/features/crm_module/module.feature:8)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to \"CRM\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_navigates_to(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user goes to \"Lead Tags\" under \"Leads \u0026 Opportunities\" module",
+  "name": "user navigates to Contacts module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_goes_to_under_module(String,String)"
+  "location": "ContactsStepDefinitions.user_navigates_to_module()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user creates and saves a new tag \"New Cars\"",
-  "keyword": "And "
+  "name": "search and delete \"Dzhamol\" contact",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_creates_and_saves_a_new_tag(String)"
+  "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.step({
-  "name": "user verifies that message displayed is equal to \"New Cars\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_verifies_that_message_displayed_is_equal_to(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user deletes the tag \"New Cars\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_deletes_the_tag(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.embedding("image/png", "embedded0.png", null);
 formatter.after({
   "status": "passed"
 });
