@@ -3,20 +3,18 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-01-11T02:05:55.373Z",
-        "line": 44,
-        "name": "Deleting the created an opportunity",
+        "line": 3,
+        "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
         "description": "",
-        "id": "pipeline-module-functionality;deleting-the-created-an-opportunity;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1926143,
-              "status": "skipped"
+              "duration": 1447258723,
+              "status": "passed"
             },
-            "line": 26,
+            "line": 4,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
@@ -25,10 +23,10 @@
           },
           {
             "result": {
-              "duration": 606197,
-              "status": "skipped"
+              "duration": 4053374703,
+              "status": "passed"
             },
-            "line": 27,
+            "line": 5,
             "name": "user logs in as \"eventscrmmanager2\"",
             "match": {
               "arguments": [
@@ -43,10 +41,10 @@
           },
           {
             "result": {
-              "duration": 1112762,
-              "status": "skipped"
+              "duration": 2085675646,
+              "status": "passed"
             },
-            "line": 28,
+            "line": 6,
             "name": "user navigates to \"CRM\"",
             "match": {
               "arguments": [
@@ -61,176 +59,86 @@
           },
           {
             "result": {
-              "duration": 2576642,
-              "status": "skipped"
+              "duration": 63331360,
+              "status": "passed"
             },
-            "line": 29,
-            "name": "user click to Create button",
+            "line": 7,
+            "name": "user navigates to Quotations",
             "match": {
-              "location": "CRM_StepDefinitions.user_click_to_Create_button()"
+              "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
             },
             "keyword": "Then "
-          },
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-11T02:59:31.938Z",
+        "before": [
           {
             "result": {
-              "duration": 556332,
-              "status": "skipped"
+              "duration": 2378321624,
+              "status": "passed"
             },
-            "line": 30,
-            "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Opportunity #4\"",
-                  "offset": 36
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Verify that \"Print\" and \"Action\" buttons are displayed and functioning",
+        "description": "",
+        "id": "quotations-module-functionality;verify-that-\"print\"-and-\"action\"-buttons-are-displayed-and-functioning",
+        "after": [
+          {
+            "result": {
+              "duration": 93945187,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3254648554,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user checks the first present checkbox",
+            "match": {
+              "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 723345,
-              "status": "skipped"
+              "duration": 16458628672,
+              "status": "passed"
             },
-            "line": 31,
-            "name": "user enter customer name in the \"Ibr\" box",
+            "line": 23,
+            "name": "user clicks at Print and Action buttons to see the options",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Ibr\"",
-                  "offset": 32
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1397842,
-              "status": "skipped"
-            },
-            "line": 32,
-            "name": "user click Create button on the Create a Customer module",
-            "match": {
-              "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1026174,
-              "status": "skipped"
-            },
-            "line": 33,
-            "name": "user clear the expected revenue box",
-            "match": {
-              "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 430382,
-              "status": "skipped"
-            },
-            "line": 34,
-            "name": "user enter amount in \"2500\" box",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2500\"",
-                  "offset": 21
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 348250,
-              "status": "skipped"
-            },
-            "line": 35,
-            "name": "user pick the priority",
-            "match": {
-              "location": "CRM_StepDefinitions.user_pick_the_priority()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 341302,
-              "status": "skipped"
-            },
-            "line": 36,
-            "name": "user click the Create button.",
-            "match": {
-              "location": "CRM_StepDefinitions.user_click_the_Create_button()"
+              "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 37,
-            "name": "user click the vertical ellipsis",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 38,
-            "name": "user click the Delete button",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 39,
-            "name": "verify that \"Are you sure you want to delete this record ?\" sentence displayed",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 40,
-            "name": "click the OK button",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 41,
-            "name": "verify that \"Opportunity #4\" is not displayed",
-            "match": {},
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@deletingOpportunity"
+            "name": "@Print_Action_Buttons"
           }
         ]
       }
     ],
-    "name": "Pipeline Module Functionality",
+    "name": "Quotations Module Functionality",
     "description": "",
-    "id": "pipeline-module-functionality",
+    "id": "quotations-module-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/crm_module/Pipeline.feature",
+    "uri": "file:src/test/resources/features/crm_module/Quotations.feature",
     "tags": []
   }
 ]

@@ -1,5 +1,6 @@
 package com.odoo.pages;
 
+import com.odoo.step_definitions.CRM_StepDefinitions;
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
 import org.junit.Assert;
@@ -32,6 +33,34 @@ public class CRM_Page extends BasePage {
 
     @FindBy(css = "[data-original-title=\"Graph\"]")
     public WebElement graph;
+
+    //######################
+
+    //Print and Action Buttons(Quotations)
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[1]/div/input")
+    public WebElement firstCheckboxQuotations;
+
+    @FindBy(xpath = "//button[contains(text(), 'Print' )]")
+    public WebElement printButtonQuotations;
+
+    @FindBy(linkText = "Quotation / Order")
+    public WebElement quotationOrderOption;
+
+    @FindBy(xpath = "//button[contains(text(), 'Action' )]")
+    public WebElement actionButtonQuotations;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/ul/li[1]")
+    public WebElement exportButtonQuotations;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/ul/li[2]")
+    public WebElement deleteButtonQuotations;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/ul/li[3]")
+    public WebElement invoiceOrderButtonQuotations;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/ul/li[4]")
+    public WebElement recoveryEmailButtonQuotations;
 
     //######################
 
@@ -126,6 +155,34 @@ public class CRM_Page extends BasePage {
             eachButton.click();
             Assert.assertTrue("This button is not displayed!",eachButton.isDisplayed());
            //BrowserUtils.wait(1);
+        }
+
+    }
+
+    public void checkTheFunctionaltyOfPrintAndActionButtons() {
+
+        BrowserUtils.wait(3);
+        printButtonQuotations.click();
+
+        Assert.assertTrue("the button is not displayed!",quotationOrderOption.isDisplayed());
+        Assert.assertEquals("the button matches correctly!", "Quotation / Order", quotationOrderOption.getText());
+
+        BrowserUtils.wait(3);
+
+        actionButtonQuotations.click();
+        List<WebElement> options = new ArrayList<>(Arrays.asList((exportButtonQuotations),(deleteButtonQuotations),(invoiceOrderButtonQuotations),(recoveryEmailButtonQuotations)));
+        List<String> texts = new ArrayList<>(Arrays.asList("Export", "Delete", "Invoice Order", "Send a Cart Recovery Email"));
+
+
+        BrowserUtils.wait(2);
+
+        for(int i =0; i < 4; i++) {
+            WebElement eachOption = options.get(i);
+            String actualText = options.get(i).getText();
+            String expectedText = texts.get(i);
+            Assert.assertTrue("This option is not visible!",eachOption .isDisplayed());
+            Assert.assertEquals("This option doesn't match with expected!", expectedText, actualText);
+            BrowserUtils.wait(2);
         }
 
     }
