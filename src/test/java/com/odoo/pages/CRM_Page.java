@@ -100,6 +100,18 @@ public class CRM_Page extends BasePage {
 
     @FindBy(xpath = "//span[@name=\"name\"]")
     public WebElement newTagName;
+
+    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[4]/div[1]/a/span")
+    public WebElement verticalEllipsisDotsElements;
+
+    @FindBy ()
+    public WebElement deleteButtonElement;
+
+    @FindBy (css = "[class='modal-body']")
+    public WebElement sentenceElement;
+
+    @FindBy (css = "[class='btn btn-sm btn-primary']")
+    public WebElement okButtonElement;
    //*************CHIHAN****************************
 
     public void Wait(){

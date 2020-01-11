@@ -137,8 +137,8 @@ public class CRM_StepDefinitions {
         crm_page.selectPriority();
     }
 
-    @Then("user click the {string} button.")
-    public void user_click_the_button(String string) {
+    @Then("user click the Create button.")
+    public void user_click_the_Create_button() {
         crm_page.clickCreateButton();
     }
 
@@ -156,6 +156,36 @@ public class CRM_StepDefinitions {
         Driver.get().navigate().refresh();
         System.out.println("verify: " + crm_page.verifyNewOpportunity());
         Assert.assertEquals(string, crm_page.verifyNewOpportunity());
+    }
+
+    //*****************ibrahim @deletingOpportunity *****************************
+    @Then("user click the vertical ellipsis")
+    public void user_click_the_vertical_ellipsis() {
+
+    }
+
+    @Then("user click the Delete button")
+    public void user_click_the_Delete_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("verify that {string} sentence displayed")
+    public void verify_that_sentence_displayed(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("click the OK button")
+    public void click_the_OK_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("verify that {string} is not displayed")
+    public void verify_that_is_not_displayed(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
     }
 
 

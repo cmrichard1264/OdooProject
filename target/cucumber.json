@@ -1,132 +1,236 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 4,
-        "name": "user is on the login page",
+        "start_timestamp": "2020-01-11T02:05:55.373Z",
+        "line": 44,
+        "name": "Deleting the created an opportunity",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "pipeline-module-functionality;deleting-the-created-an-opportunity;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1257370900,
-              "status": "passed"
+              "duration": 1926143,
+              "status": "skipped"
             },
-            "line": 5,
+            "line": 26,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
             },
             "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-10T18:39:35.750Z",
-        "before": [
+          },
           {
             "result": {
-              "duration": 4097426000,
-              "status": "passed"
+              "duration": 606197,
+              "status": "skipped"
             },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 17,
-        "name": "Delete a contact",
-        "description": "",
-        "id": "contacts-page-testing;delete-a-contact",
-        "after": [
-          {
-            "result": {
-              "duration": 712680600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.teardown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3629653900,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "user logs in as \"pos1\"",
+            "line": 27,
+            "name": "user logs in as \"eventscrmmanager2\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"pos1\"",
+                  "val": "\"eventscrmmanager2\"",
                   "offset": 16
                 }
               ],
               "location": "CRM_StepDefinitions.user_logs_in_as(String)"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 3076618800,
-              "status": "passed"
+              "duration": 1112762,
+              "status": "skipped"
             },
-            "line": 19,
-            "name": "user navigates to Contacts module",
-            "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 9597364800,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "search and delete \"Dzhamol\" contact",
+            "line": 28,
+            "name": "user navigates to \"CRM\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Dzhamol\"",
+                  "val": "\"CRM\"",
                   "offset": 18
                 }
               ],
-              "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2576642,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "user click to Create button",
+            "match": {
+              "location": "CRM_StepDefinitions.user_click_to_Create_button()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 556332,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opportunity #4\"",
+                  "offset": 36
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 723345,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "user enter customer name in the \"Ibr\" box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ibr\"",
+                  "offset": 32
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1397842,
+              "status": "skipped"
+            },
+            "line": 32,
+            "name": "user click Create button on the Create a Customer module",
+            "match": {
+              "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1026174,
+              "status": "skipped"
+            },
+            "line": 33,
+            "name": "user clear the expected revenue box",
+            "match": {
+              "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 430382,
+              "status": "skipped"
+            },
+            "line": 34,
+            "name": "user enter amount in \"2500\" box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2500\"",
+                  "offset": 21
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 348250,
+              "status": "skipped"
+            },
+            "line": 35,
+            "name": "user pick the priority",
+            "match": {
+              "location": "CRM_StepDefinitions.user_pick_the_priority()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 341302,
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "user click the Create button.",
+            "match": {
+              "location": "CRM_StepDefinitions.user_click_the_Create_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 37,
+            "name": "user click the vertical ellipsis",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 38,
+            "name": "user click the Delete button",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "verify that \"Are you sure you want to delete this record ?\" sentence displayed",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 40,
+            "name": "click the OK button",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 41,
+            "name": "verify that \"Opportunity #4\" is not displayed",
+            "match": {},
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@delete_a_contact"
+            "name": "@deletingOpportunity"
           }
         ]
       }
     ],
-    "name": "Contacts page testing",
+    "name": "Pipeline Module Functionality",
     "description": "",
-    "id": "contacts-page-testing",
+    "id": "pipeline-module-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
-    "tags": [
-      {
-        "name": "@contacts_page",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/crm_module/Pipeline.feature",
+    "tags": []
   }
 ]
