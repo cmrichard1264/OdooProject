@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1921366624,
+              "duration": 1737831034,
               "status": "passed"
             },
             "line": 4,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 3488608923,
+              "duration": 3806447475,
               "status": "passed"
             },
             "line": 5,
@@ -41,7 +41,7 @@
           },
           {
             "result": {
-              "duration": 2088828316,
+              "duration": 2073064887,
               "status": "passed"
             },
             "line": 6,
@@ -59,7 +59,7 @@
           },
           {
             "result": {
-              "duration": 79180767,
+              "duration": 64280136,
               "status": "passed"
             },
             "line": 7,
@@ -72,11 +72,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-01-11T04:16:38.283Z",
+        "start_timestamp": "2020-01-11T21:32:50.322Z",
         "before": [
           {
             "result": {
-              "duration": 1736850519,
+              "duration": 1665165579,
               "status": "passed"
             },
             "match": {
@@ -84,14 +84,14 @@
             }
           }
         ],
-        "line": 21,
-        "name": "Verify that \"Print\" and \"Action\" buttons are displayed and functioning",
+        "line": 26,
+        "name": "Verify that user is able to check one of the quotations, save it as a template and send a recovery email",
         "description": "",
-        "id": "quotations-module-functionality;verify-that-\"print\"-and-\"action\"-buttons-are-displayed-and-functioning",
+        "id": "quotations-module-functionality;verify-that-user-is-able-to-check-one-of-the-quotations--save-it-as-a-template-and-send-a-recovery-email",
         "after": [
           {
             "result": {
-              "duration": 95709895,
+              "duration": 90815979,
               "status": "passed"
             },
             "match": {
@@ -104,10 +104,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3150165635,
+              "duration": 3127422941,
               "status": "passed"
             },
-            "line": 22,
+            "line": 27,
             "name": "user checks the first present checkbox",
             "match": {
               "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
@@ -116,20 +116,62 @@
           },
           {
             "result": {
-              "duration": 16446888174,
+              "duration": 16438877932,
               "status": "passed"
             },
-            "line": 23,
+            "line": 28,
             "name": "user clicks at Print and Action buttons to see the options",
             "match": {
               "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79781407,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user clicks at \"send a recovery email\" option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"send a recovery email\"",
+                  "offset": 15
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_clicks_at_option(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5806206588,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user should save it as a new template",
+            "match": {
+              "location": "CRM_StepDefinitions.user_should_save_it_as_a_new_template()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77324608,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user clicks at the send button to send the recovery email",
+            "match": {
+              "location": "CRM_StepDefinitions.user_clicks_at_the_send_button_to_send_the_recovery_email()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Print_Action_Buttons"
+            "name": "@Send_A_Card_Recovery_Email"
           }
         ]
       }

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
         dryRun = false,
-        tags = "@configure_message",
+        tags = "@Send_A_Card_Recovery_Email",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"
         }
