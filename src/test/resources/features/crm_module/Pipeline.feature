@@ -21,7 +21,7 @@ Feature: Pipeline Module Functionality
     | Opportunity    | Customer | Expected Revenue |
     | Opportunity #4 | Ibr      | 2500             |
 
-    @deletingOpportunity
+    @deletingOpportunity @test2 @PipelineTest1
   Scenario Outline: Deleting the created an opportunity
     Given user is on the login page
     When user logs in as "eventscrmmanager2"

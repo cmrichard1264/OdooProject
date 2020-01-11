@@ -3,6 +3,7 @@ package com.odoo.pages;
 import com.odoo.step_definitions.CRM_StepDefinitions;
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
+import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.By;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.security.PublicKey;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -130,18 +132,8 @@ public class CRM_Page extends BasePage {
     @FindBy(xpath = "//span[@name=\"name\"]")
     public WebElement newTagName;
 
-    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[4]/div[1]/a/span")
-    public WebElement verticalEllipsisDotsElements;
+    //*************CHIHAN****************************
 
-    @FindBy ()
-    public WebElement deleteButtonElement;
-
-    @FindBy (css = "[class='modal-body']")
-    public WebElement sentenceElement;
-
-    @FindBy (css = "[class='btn btn-sm btn-primary']")
-    public WebElement okButtonElement;
-   //*************CHIHAN****************************
 
     public void Wait(){
         wait = new WebDriverWait(Driver.get(),10);
@@ -219,21 +211,24 @@ public class CRM_Page extends BasePage {
         costumerNameBoxElemnet.click();
         BrowserUtils.wait(2);
         costumerNameBoxElemnet.sendKeys(Customer);
+        BrowserUtils.wait(2);
+        clickEmptySpaceElement.click();
     }
 
     //verify that "Create a Customer" module-title display
     public String CreateCustomerModuleTitle(){
-        clickEmptySpaceElement.click();
-        Driver.get().manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+      Driver.get().manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
       return customer_Module_Title_Element.getText();
     }
 
     //user click Create button on the Create a Customer module
     public void createButtonOnCreateCustomerPage(){
+       BrowserUtils.wait(2);
         createButtonOnCreateOpportunityPage.click();
     }
     //user clear the expected revenue box
     public void clearRevenueBox(){
+        BrowserUtils.wait(2);
         revenueboxElement.click();
         revenueboxElement.clear();
 
@@ -241,22 +236,25 @@ public class CRM_Page extends BasePage {
 
     //user enter amount in {string} box
     public void enterAmountInRevenueBox(String string){
+        BrowserUtils.wait(2);
         revenueboxElement.sendKeys(string);
     }
 
     //user pick the priority
     public void selectPriority(){
+        BrowserUtils.wait(2);
         priorityElement.click();
     }
 
     //user click the {string} button.
     public void clickCreateButton(){
+        Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         lastcreateButton.click();
     }
 
     // verify that {string} displayed
     public String verifyNewOpportunity(){
-        BrowserUtils.wait(3);
+        BrowserUtils.wait(2);
        return verifyNewOppotunityElement.getText();
     }
 
@@ -278,6 +276,53 @@ public class CRM_Page extends BasePage {
     }
     //*******************Cihan*****************************
 
+    //*******************ibrahim @test2*****************************
+    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[5]/div[1]/a/span")
+    public WebElement verticalEllipsisDotsElements;
 
+    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[5]/div[1]/ul/li[2]/a")
+    public WebElement deleteButtonElement;
 
+    @FindBy (css = "[class='modal-body']")
+    public WebElement sentenceElement;
+
+    @FindBy (css = "[class='btn btn-sm btn-primary']")
+    public WebElement okButtonElement;
+
+    // click the vertical ellipsis
+    public void clickVerticalEllipsisDots(){
+        BrowserUtils.waitForClickablility(verticalEllipsisDotsElements,3);
+        verticalEllipsisDotsElements.click();
+    }
+
+    // click the Delete button
+    public void clickDeleteButton(){
+        BrowserUtils.waitForClickablility(deleteButtonElement,3);
+        deleteButtonElement.click();
+    }
+
+    //Are you sure you want to delete this record ? sentence dispaled
+    public String warningSentence(){
+       String sentence = sentenceElement.getText();
+        return sentence;
+    }
+
+    //click the OK button
+    public void clickOkButton(){
+        okButtonElement.click();
+    }
+
+     //verify that opportunity is not displayed
+    public boolean deleteOpportunity() {
+        BrowserUtils.wait(2);
+        boolean present;
+        try {
+            Driver.get().findElement(By.xpath("//*[text() ='Opportunity #4']"));
+            present = true;
+        } catch (NoSuchElementException e) {
+            present = false;
+        }
+        return present;
+
+    }
 }
