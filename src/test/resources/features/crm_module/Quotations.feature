@@ -1,10 +1,10 @@
 Feature: Quotations Module Functionality
 
-  Background: user logs in as a eventscrmmanager2 and clicks at the "CRM" and "Quotations" modules
+  Background: user logs in as eventscrmmanager2 and clicks at the "CRM" and "Quotations" modules
     Given user is on the login page
     When user logs in as "eventscrmmanager2"
     And user navigates to "CRM"
-    Then user navigates to "Quotations"
+    Then user navigates to Quotations
 
   #Noah
   @select_all_checkbox
@@ -17,3 +17,7 @@ Feature: Quotations Module Functionality
      And user clicks at five "buttons" in order List, Kanban, Calendar, Pivot and Graph
 
 
+   @Print_Action_Buttons
+   Scenario: Verify that "Print" and "Action" buttons are displayed and functioning
+     And user checks the first present checkbox
+     Then user clicks at Print and Action buttons to see the options
