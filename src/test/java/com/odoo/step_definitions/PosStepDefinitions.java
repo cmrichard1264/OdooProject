@@ -16,29 +16,25 @@ public class PosStepDefinitions {
 
     @Given("user logs in as Pos manager")
     public void user_logs_in_as_Pos_manager() {
-
         System.out.println("Login as Pos manager");
-
         String username = ConfigurationReader.getProperty("pos1.username");
         String password = ConfigurationReader.getProperty("all.pos.password");
         loginPage.login(username, password);
-
     }
 
     @Then("user navigates to Pos Module")
     public void user_navigates_to_Pos_Module() {
-
         posPage.navigateToPosModule();
         System.out.println("I am in Pos Module");
-
     }
 
     @Then("verify that page limit is {int}")
     public void verify_that_page_limit_is(Integer int1) {
 
-        posPage.PageLimit();
-        System.out.println("Page limit is 32");
 
+
+        posPage.PageLimit();
+        System.out.println("Page limit is "+int1);
     }
     @Given("userlogs in as pos_manager")
     public void userlogs_in_as_pos_manager() {

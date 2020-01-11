@@ -67,6 +67,22 @@ public class CRM_StepDefinitions {
             }
         }
     }
+
+    //##################################################################################################################
+
+//      Feature: Quotations Module Functionality
+//      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
+//      By Noah Adams
+//      01.09.2020 / Around 10:00 PM
+
+
+    @Then("user clicks at five {string} in order List, Kanban, Calendar, Pivot and Graph")
+    public void user_clicks_at_five_in_order_List_Kanban_Calendar_Pivot_and_Graph(String string) {
+
+        crm_page.quotationsFiveButtons();
+
+    }
+
     //##################################################################################################################
 
     // Feature: Pipeline Module Functionality
@@ -144,6 +160,7 @@ public class CRM_StepDefinitions {
 
 
     //*****************Cihan*****************************
+
     @Then("user goes to {string} under {string} module")
     public void user_goes_to_under_module(String submodule, String module) {
         crm_page.leadsTab.click();
