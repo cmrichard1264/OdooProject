@@ -1,34 +1,82 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 4,
-        "name": "user is on the login page",
+        "line": 3,
+        "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1257370900,
+              "duration": 1447258723,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "user is on the login page",
             "match": {
               "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4053374703,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user logs in as \"eventscrmmanager2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"eventscrmmanager2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2085675646,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user navigates to \"CRM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63331360,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user navigates to Quotations",
+            "match": {
+              "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
+            },
+            "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2020-01-10T18:39:35.750Z",
+        "start_timestamp": "2020-01-11T02:59:31.938Z",
         "before": [
           {
             "result": {
-              "duration": 4097426000,
+              "duration": 2378321624,
               "status": "passed"
             },
             "match": {
@@ -36,14 +84,14 @@
             }
           }
         ],
-        "line": 17,
-        "name": "Delete a contact",
+        "line": 21,
+        "name": "Verify that \"Print\" and \"Action\" buttons are displayed and functioning",
         "description": "",
-        "id": "contacts-page-testing;delete-a-contact",
+        "id": "quotations-module-functionality;verify-that-\"print\"-and-\"action\"-buttons-are-displayed-and-functioning",
         "after": [
           {
             "result": {
-              "duration": 712680600,
+              "duration": 93945187,
               "status": "passed"
             },
             "match": {
@@ -56,77 +104,41 @@
         "steps": [
           {
             "result": {
-              "duration": 3629653900,
+              "duration": 3254648554,
               "status": "passed"
             },
-            "line": 18,
-            "name": "user logs in as \"pos1\"",
+            "line": 22,
+            "name": "user checks the first present checkbox",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"pos1\"",
-                  "offset": 16
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+              "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
             },
-            "keyword": "Given "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 3076618800,
+              "duration": 16458628672,
               "status": "passed"
             },
-            "line": 19,
-            "name": "user navigates to Contacts module",
+            "line": 23,
+            "name": "user clicks at Print and Action buttons to see the options",
             "match": {
-              "location": "ContactsStepDefinitions.user_navigates_to_module()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 9597364800,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "search and delete \"Dzhamol\" contact",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Dzhamol\"",
-                  "offset": 18
-                }
-              ],
-              "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
+              "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@contacts_page"
-          },
-          {
-            "name": "@delete_a_contact"
+            "name": "@Print_Action_Buttons"
           }
         ]
       }
     ],
-    "name": "Contacts page testing",
+    "name": "Quotations Module Functionality",
     "description": "",
-    "id": "contacts-page-testing",
+    "id": "quotations-module-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
-    "tags": [
-      {
-        "name": "@contacts_page",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/crm_module/Quotations.feature",
+    "tags": []
   }
 ]

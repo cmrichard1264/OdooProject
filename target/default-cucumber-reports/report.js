@@ -1,16 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/Quotations.feature");
 formatter.feature({
-  "name": "Contacts page testing",
+  "name": "Quotations Module Functionality",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.background({
-  "name": "user is on the login page",
+  "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
   "description": "",
   "keyword": "Background"
 });
@@ -27,22 +22,9 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Delete a contact",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@delete_a_contact"
-    }
-  ]
-});
 formatter.step({
-  "name": "user logs in as \"pos1\"",
-  "keyword": "Given "
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
 });
 formatter.match({
   "location": "CRM_StepDefinitions.user_logs_in_as(String)"
@@ -51,21 +33,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
-  "keyword": "Then "
+  "name": "user navigates to \"CRM\"",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "CRM_StepDefinitions.user_navigates_to(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "search and delete \"Dzhamol\" contact",
+  "name": "user navigates to Quotations",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
+  "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify that \"Print\" and \"Action\" buttons are displayed and functioning",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Print_Action_Buttons"
+    }
+  ]
+});
+formatter.step({
+  "name": "user checks the first present checkbox",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks at Print and Action buttons to see the options",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
 });
 formatter.result({
   "status": "passed"
