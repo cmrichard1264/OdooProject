@@ -78,7 +78,6 @@ public class CRM_StepDefinitions {
     //##################################################################################################################
     //##################################################################################################################
 
-
     //      Feature: Quotations Module Functionality
     //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
     //      By Noah Adams
