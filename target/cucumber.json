@@ -1,0 +1,132 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "user is on the login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1257370900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-10T18:39:35.750Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4097426000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Delete a contact",
+        "description": "",
+        "id": "contacts-page-testing;delete-a-contact",
+        "after": [
+          {
+            "result": {
+              "duration": 712680600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3629653900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user logs in as \"pos1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pos1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3076618800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user navigates to Contacts module",
+            "match": {
+              "location": "ContactsStepDefinitions.user_navigates_to_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9597364800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "search and delete \"Dzhamol\" contact",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Dzhamol\"",
+                  "offset": 18
+                }
+              ],
+              "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@contacts_page"
+          },
+          {
+            "name": "@delete_a_contact"
+          }
+        ]
+      }
+    ],
+    "name": "Contacts page testing",
+    "description": "",
+    "id": "contacts-page-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/contacts_module/Contacts.feature",
+    "tags": [
+      {
+        "name": "@contacts_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

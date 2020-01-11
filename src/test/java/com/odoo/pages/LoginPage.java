@@ -56,23 +56,23 @@ public class LoginPage extends BasePage{
                 userName = ConfigurationReader.getProperty("contacts5.username");
                  password = ConfigurationReader.getProperty("allcontacts.password");
                  break;
-            case "pos_user1":
+            case "pos1":
                 userName = ConfigurationReader.getProperty("pos1.username");
                 password = ConfigurationReader.getProperty("all.pos.password");
                 break;
-            case "pos_user2":
+            case "pos2":
                 userName = ConfigurationReader.getProperty("pos2.username");
                 password = ConfigurationReader.getProperty("all.pos.password");
                 break;
-            case "pos_user3":
+            case "pos3":
                 userName = ConfigurationReader.getProperty("pos3.username");
                 password = ConfigurationReader.getProperty("all.pos.password");
                 break;
-            case "pos_user4":
+            case "pos4":
                 userName = ConfigurationReader.getProperty("pos4.username");
                 password = ConfigurationReader.getProperty("all.pos.password");
                 break;
-            case "pos_user5":
+            case "pos5":
                 userName = ConfigurationReader.getProperty("pos5.username");
                 password = ConfigurationReader.getProperty("all.pos.password");
                 break;
