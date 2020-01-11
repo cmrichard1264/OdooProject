@@ -30,10 +30,10 @@ public class CRM_StepDefinitions {
     //##################################################################################################################
     //##################################################################################################################
 
-//      Feature: Quotations Module Functionality
-//      Scenario: Verify that that all checkboxes are clicked when user clicks at 'select all checkbox'.
-//      By Noah Adams
-//      01.07.2020
+    //      Feature: Quotations Module Functionality
+    //      Scenario: Verify that that all checkboxes are clicked when user clicks at 'select all checkbox'.
+    //      By Noah Adams
+    //      01.07.2020
 
     @When("user logs in as {string}")
     public void user_logs_in_as(String string) {
@@ -55,8 +55,8 @@ public class CRM_StepDefinitions {
     public void user_select_the(String string) {
         BrowserUtils.wait(5);
         WebElement q = crm_page.quotationSelectAllCheckBox;
-//        wait.until(ExpectedConditions.visibilityOf(q));
-//        wait.until(ExpectedConditions.elementToBeClickable(q));
+    //        wait.until(ExpectedConditions.visibilityOf(q));
+    //        wait.until(ExpectedConditions.elementToBeClickable(q));
         q.click();
         BrowserUtils.wait(3);
         Assert.assertTrue(q.isSelected());
@@ -83,10 +83,10 @@ public class CRM_StepDefinitions {
 
 
 
-//      Feature: Quotations Module Functionality
-//      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
-//      By Noah Adams
-//      01.09.2020 / Around 10:00 PM
+    //      Feature: Quotations Module Functionality
+    //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
+    //      By Noah Adams
+    //      01.09.2020 / Around 10:00 PM
 
 
     @Then("user clicks at five {string} in order List, Kanban, Calendar, Pivot and Graph")
@@ -103,10 +103,10 @@ public class CRM_StepDefinitions {
 
 
 
-//      Feature: Quotations Module Functionality
-//      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
-//      By Noah Adams
-//      01.10.2020   /  19:03 - 22:01 PM
+    //      Feature: Quotations Module Functionality
+    //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
+    //      By Noah Adams
+    //      01.10.2020   /  19:03 - 22:01 PM
 
     @Then("user checks the first present checkbox")
     public void user_checks_the_first_present_checkbox() {
@@ -122,12 +122,41 @@ public class CRM_StepDefinitions {
     }
 
     //##################################################################################################################
+    //##################################################################################################################
 
+
+    //      Feature: Quotations Module Functionality
+    //      Scenario: Verify that user is able to check one of the quotations, save it as a template and send a recovery email
+    //      By Noah Adams
+    //      01.11.2020   /  16:13 - 16;33 PM
+
+    @Then("user clicks at {string} option")
+    public void user_clicks_at_option(String option) {
+        crm_page.recoveryEmailButtonQuotations.click();
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+    }
+
+    @Then("user should save it as a new template")
+    public void user_should_save_it_as_a_new_template() {
+        Assert.assertTrue(crm_page.saveAsNewTemplateButton.isDisplayed());
+        crm_page.saveAsNewTemplateButton.click();
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+    }
+
+    @Then("user clicks at the send button to send the recovery email")
+    public void user_clicks_at_the_send_button_to_send_the_recovery_email() {
+       Assert.assertTrue(crm_page.sendButtonQuotations.isDisplayed());
+       crm_page.sendButtonQuotations.click();
+    }
+
+    //##################################################################################################################
+    //##################################################################################################################
 
 
     // Feature: Pipeline Module Functionality
     //  Scenario Outline: Verify that create an opportunity when click the create button.
     //  Created by: Ibrahim Yazar 01/08/2020
+
     @Then("user click to Create button")
     public void user_click_to_Create_button() {
         crm_page.clickCreateButtonPipelinePage();

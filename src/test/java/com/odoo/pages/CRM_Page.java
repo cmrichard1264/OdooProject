@@ -62,6 +62,12 @@ public class CRM_Page extends BasePage {
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/ul/li[4]")
     public WebElement recoveryEmailButtonQuotations;
 
+    @FindBy(xpath = "//span[contains(text(), 'Save as')]")
+    public WebElement saveAsNewTemplateButton;
+
+    @FindBy(css = "[class=\"btn btn-sm btn-primary o_mail_send\"]")
+    public WebElement sendButtonQuotations;
+
     //######################
 
     public WebDriverWait wait;

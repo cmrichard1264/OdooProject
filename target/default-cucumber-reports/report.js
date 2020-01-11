@@ -1,26 +1,13 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Pos_module/Pos.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/Quotations.feature");
 formatter.feature({
-  "name": "Pos page testing",
+  "name": "Quotations Module Functionality",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@Pos_page"
-    }
-  ]
+  "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "verify that configure message displayed",
+formatter.background({
+  "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@Pos_page"
-    },
-    {
-      "name": "@configure_message"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -36,41 +23,91 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "userlogs in as pos_manager",
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to \"CRM\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PosStepDefinitions.userlogs_in_as_pos_manager()"
+  "location": "CRM_StepDefinitions.user_navigates_to(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to POS module",
+  "name": "user navigates to Quotations",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PosStepDefinitions.user_navigates_to_POS_module()"
+  "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
 });
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Verify that user is able to check one of the quotations, save it as a template and send a recovery email",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Send_A_Card_Recovery_Email"
+    }
+  ]
+});
 formatter.step({
-  "name": "user types into search box",
+  "name": "user checks the first present checkbox",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PosStepDefinitions.user_types_into_search_box()"
+  "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that configure message displayed",
+  "name": "user clicks at Print and Action buttons to see the options",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks at \"send a recovery email\" option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_clicks_at_option(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should save it as a new template",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_should_save_it_as_a_new_template()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks at the send button to send the recovery email",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PosStepDefinitions.verify_that_configure_message_displayed()"
+  "location": "CRM_StepDefinitions.user_clicks_at_the_send_button_to_send_the_recovery_email()"
 });
 formatter.result({
   "status": "passed"

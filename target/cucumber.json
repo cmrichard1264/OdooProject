@@ -1,13 +1,82 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-01-10T04:05:06.451Z",
+        "line": 3,
+        "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1737831034,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is on the login page",
+            "match": {
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3806447475,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user logs in as \"eventscrmmanager2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"eventscrmmanager2\"",
+                  "offset": 16
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2073064887,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user navigates to \"CRM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CRM\"",
+                  "offset": 18
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_navigates_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64280136,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user navigates to Quotations",
+            "match": {
+              "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-11T21:32:50.322Z",
         "before": [
           {
             "result": {
-              "duration": 1649858948,
+              "duration": 1665165579,
               "status": "passed"
             },
             "match": {
@@ -15,14 +84,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "verify that configure message displayed",
+        "line": 26,
+        "name": "Verify that user is able to check one of the quotations, save it as a template and send a recovery email",
         "description": "",
-        "id": "pos-page-testing;verify-that-configure-message-displayed",
+        "id": "quotations-module-functionality;verify-that-user-is-able-to-check-one-of-the-quotations--save-it-as-a-template-and-send-a-recovery-email",
         "after": [
           {
             "result": {
-              "duration": 78627366,
+              "duration": 90815979,
               "status": "passed"
             },
             "match": {
@@ -35,89 +104,83 @@
         "steps": [
           {
             "result": {
-              "duration": 1356719626,
+              "duration": 3127422941,
               "status": "passed"
             },
-            "line": 15,
-            "name": "user is on the login page",
+            "line": 27,
+            "name": "user checks the first present checkbox",
             "match": {
-              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1517780256,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "userlogs in as pos_manager",
-            "match": {
-              "location": "PosStepDefinitions.userlogs_in_as_pos_manager()"
+              "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4064173853,
+              "duration": 16438877932,
               "status": "passed"
             },
-            "line": 17,
-            "name": "user navigates to POS module",
+            "line": 28,
+            "name": "user clicks at Print and Action buttons to see the options",
             "match": {
-              "location": "PosStepDefinitions.user_navigates_to_POS_module()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4074300567,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "user types into search box",
-            "match": {
-              "location": "PosStepDefinitions.user_types_into_search_box()"
+              "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 6105913849,
+              "duration": 79781407,
               "status": "passed"
             },
-            "line": 19,
-            "name": "verify that configure message displayed",
+            "line": 29,
+            "name": "user clicks at \"send a recovery email\" option",
             "match": {
-              "location": "PosStepDefinitions.verify_that_configure_message_displayed()"
+              "arguments": [
+                {
+                  "val": "\"send a recovery email\"",
+                  "offset": 15
+                }
+              ],
+              "location": "CRM_StepDefinitions.user_clicks_at_option(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5806206588,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user should save it as a new template",
+            "match": {
+              "location": "CRM_StepDefinitions.user_should_save_it_as_a_new_template()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77324608,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user clicks at the send button to send the recovery email",
+            "match": {
+              "location": "CRM_StepDefinitions.user_clicks_at_the_send_button_to_send_the_recovery_email()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Pos_page"
-          },
-          {
-            "name": "@configure_message"
+            "name": "@Send_A_Card_Recovery_Email"
           }
         ]
       }
     ],
-    "name": "Pos page testing",
+    "name": "Quotations Module Functionality",
     "description": "",
-    "id": "pos-page-testing",
+    "id": "quotations-module-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Pos_module/Pos.feature",
-    "tags": [
-      {
-        "name": "@Pos_page",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/crm_module/Quotations.feature",
+    "tags": []
   }
 ]
