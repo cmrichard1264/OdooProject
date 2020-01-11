@@ -14,6 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -25,6 +27,7 @@ public class CRM_StepDefinitions {
     public WebDriverWait wait;
     public WebDriver driver;
 
+    //##################################################################################################################
     //##################################################################################################################
 
 //      Feature: Quotations Module Functionality
@@ -41,6 +44,10 @@ public class CRM_StepDefinitions {
     @And("user navigates to {string}")
     public void user_navigates_to(String string) {
         crm_page.navigateToCrmModule();
+    }
+
+    @Then("user navigates to Quotations")
+    public void user_navigates_to_Quotations() {
         crm_page.quotationsSubModule.click();
     }
 
@@ -68,7 +75,13 @@ public class CRM_StepDefinitions {
         }
     }
 
+
+
     //##################################################################################################################
+    //##################################################################################################################
+
+
+
 
 //      Feature: Quotations Module Functionality
 //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
@@ -83,7 +96,34 @@ public class CRM_StepDefinitions {
 
     }
 
+
+
     //##################################################################################################################
+    //##################################################################################################################
+
+
+
+//      Feature: Quotations Module Functionality
+//      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
+//      By Noah Adams
+//      01.10.2020   /  19:03 - 22:01 PM
+
+    @Then("user checks the first present checkbox")
+    public void user_checks_the_first_present_checkbox() {
+        BrowserUtils.wait(3);
+        crm_page.firstCheckboxQuotations.click();
+    }
+
+    @Then("user clicks at Print and Action buttons to see the options")
+    public void user_clicks_at_Print_and_Action_buttons_to_see_the_options() {
+
+
+       crm_page.checkTheFunctionaltyOfPrintAndActionButtons();
+    }
+
+    //##################################################################################################################
+
+
 
     // Feature: Pipeline Module Functionality
     //  Scenario Outline: Verify that create an opportunity when click the create button.
