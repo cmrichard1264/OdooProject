@@ -1,82 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 3,
-        "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 1447258723,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "user is on the login page",
-            "match": {
-              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 4053374703,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user logs in as \"eventscrmmanager2\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"eventscrmmanager2\"",
-                  "offset": 16
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_logs_in_as(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2085675646,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user navigates to \"CRM\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"CRM\"",
-                  "offset": 18
-                }
-              ],
-              "location": "CRM_StepDefinitions.user_navigates_to(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 63331360,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user navigates to Quotations",
-            "match": {
-              "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-01-11T02:59:31.938Z",
+        "start_timestamp": "2020-01-10T04:05:06.451Z",
         "before": [
           {
             "result": {
-              "duration": 2378321624,
+              "duration": 1649858948,
               "status": "passed"
             },
             "match": {
@@ -84,14 +15,14 @@
             }
           }
         ],
-        "line": 21,
-        "name": "Verify that \"Print\" and \"Action\" buttons are displayed and functioning",
+        "line": 14,
+        "name": "verify that configure message displayed",
         "description": "",
-        "id": "quotations-module-functionality;verify-that-\"print\"-and-\"action\"-buttons-are-displayed-and-functioning",
+        "id": "pos-page-testing;verify-that-configure-message-displayed",
         "after": [
           {
             "result": {
-              "duration": 93945187,
+              "duration": 78627366,
               "status": "passed"
             },
             "match": {
@@ -104,41 +35,89 @@
         "steps": [
           {
             "result": {
-              "duration": 3254648554,
+              "duration": 1356719626,
               "status": "passed"
             },
-            "line": 22,
-            "name": "user checks the first present checkbox",
+            "line": 15,
+            "name": "user is on the login page",
             "match": {
-              "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
+              "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1517780256,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "userlogs in as pos_manager",
+            "match": {
+              "location": "PosStepDefinitions.userlogs_in_as_pos_manager()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16458628672,
+              "duration": 4064173853,
               "status": "passed"
             },
-            "line": 23,
-            "name": "user clicks at Print and Action buttons to see the options",
+            "line": 17,
+            "name": "user navigates to POS module",
             "match": {
-              "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
+              "location": "PosStepDefinitions.user_navigates_to_POS_module()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4074300567,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user types into search box",
+            "match": {
+              "location": "PosStepDefinitions.user_types_into_search_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6105913849,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify that configure message displayed",
+            "match": {
+              "location": "PosStepDefinitions.verify_that_configure_message_displayed()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Print_Action_Buttons"
+            "name": "@Pos_page"
+          },
+          {
+            "name": "@configure_message"
           }
         ]
       }
     ],
-    "name": "Quotations Module Functionality",
+    "name": "Pos page testing",
     "description": "",
-    "id": "quotations-module-functionality",
+    "id": "pos-page-testing",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/crm_module/Quotations.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/Pos_module/Pos.feature",
+    "tags": [
+      {
+        "name": "@Pos_page",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

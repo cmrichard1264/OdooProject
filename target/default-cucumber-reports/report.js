@@ -1,13 +1,26 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/Quotations.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Pos_module/Pos.feature");
 formatter.feature({
-  "name": "Quotations Module Functionality",
+  "name": "Pos page testing",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@Pos_page"
+    }
+  ]
 });
-formatter.background({
-  "name": "user logs in as eventscrmmanager2 and clicks at the \"CRM\" and \"Quotations\" modules",
+formatter.scenario({
+  "name": "verify that configure message displayed",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Pos_page"
+    },
+    {
+      "name": "@configure_message"
+    }
+  ]
 });
 formatter.before({
   "status": "passed"
@@ -23,61 +36,41 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as \"eventscrmmanager2\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user navigates to \"CRM\"",
+  "name": "userlogs in as pos_manager",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_navigates_to(String)"
+  "location": "PosStepDefinitions.userlogs_in_as_pos_manager()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Quotations",
+  "name": "user navigates to POS module",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_navigates_to_Quotations()"
+  "location": "PosStepDefinitions.user_navigates_to_POS_module()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Verify that \"Print\" and \"Action\" buttons are displayed and functioning",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@Print_Action_Buttons"
-    }
-  ]
-});
 formatter.step({
-  "name": "user checks the first present checkbox",
+  "name": "user types into search box",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_checks_the_first_present_checkbox()"
+  "location": "PosStepDefinitions.user_types_into_search_box()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks at Print and Action buttons to see the options",
+  "name": "verify that configure message displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_clicks_at_Print_and_Action_buttons_to_see_the_options()"
+  "location": "PosStepDefinitions.verify_that_configure_message_displayed()"
 });
 formatter.result({
   "status": "passed"
