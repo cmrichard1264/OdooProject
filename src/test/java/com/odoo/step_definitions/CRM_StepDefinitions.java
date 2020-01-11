@@ -75,12 +75,8 @@ public class CRM_StepDefinitions {
         }
     }
 
-
-
     //##################################################################################################################
     //##################################################################################################################
-
-
 
 
     //      Feature: Quotations Module Functionality
@@ -96,12 +92,8 @@ public class CRM_StepDefinitions {
 
     }
 
-
-
     //##################################################################################################################
     //##################################################################################################################
-
-
 
     //      Feature: Quotations Module Functionality
     //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
@@ -123,7 +115,6 @@ public class CRM_StepDefinitions {
 
     //##################################################################################################################
     //##################################################################################################################
-
 
     //      Feature: Quotations Module Functionality
     //      Scenario: Verify that user is able to check one of the quotations, save it as a template and send a recovery email
