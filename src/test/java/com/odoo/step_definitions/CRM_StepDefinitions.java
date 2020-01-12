@@ -8,15 +8,18 @@ import com.odoo.utilities.Driver;
 import com.odoo.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class CRM_StepDefinitions {
@@ -206,8 +209,8 @@ public class CRM_StepDefinitions {
         crm_page.selectPriority();
     }
 
-    @Then("user click the {string} button.")
-    public void user_click_the_button(String string) {
+    @Then("user click the Create button.")
+    public void user_click_the_Create_button() {
         crm_page.clickCreateButton();
     }
 
@@ -225,6 +228,34 @@ public class CRM_StepDefinitions {
         Driver.get().navigate().refresh();
         System.out.println("verify: " + crm_page.verifyNewOpportunity());
         Assert.assertEquals(string, crm_page.verifyNewOpportunity());
+    }
+
+    //*****************ibrahim @deletingOpportunity *****************************
+    @Then("user click the vertical ellipsis")
+    public void user_click_the_vertical_ellipsis() {
+    crm_page.clickVerticalEllipsisDots();
+    }
+
+    @Then("user click the Delete button")
+    public void user_click_the_Delete_button() {
+    crm_page.clickDeleteButton();
+    }
+
+    @Then("verify that {string} sentence displayed")
+    public void verify_that_sentence_displayed(String string) {
+        System.out.println("Warning sentence is: " + crm_page.warningSentence());
+        Assert.assertEquals(string, crm_page.warningSentence());
+    }
+
+    @Then("click the OK button")
+    public void click_the_OK_button() {
+        BrowserUtils.wait(2);
+       crm_page.clickOkButton();
+    }
+
+    @Then("verify that Opportunity is not displayed")
+    public void verify_that_Opportunity_is_not_displayed() {
+    crm_page.deleteOpportunity();
     }
 
 
