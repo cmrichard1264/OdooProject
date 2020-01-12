@@ -38,7 +38,7 @@ Feature: Pipeline Module Functionality
     Then user click the Delete button
     Then verify that "Are you sure you want to delete this record ?" sentence displayed
     Then click the OK button
-    And verify that "<Opportunity>" is not displayed
+    And verify that Opportunity is not displayed
     Examples:
       | Opportunity    | Customer | Expected Revenue |
       | Opportunity #4 | Ibr      | 2500             |

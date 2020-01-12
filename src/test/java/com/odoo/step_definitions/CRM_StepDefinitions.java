@@ -224,9 +224,9 @@ public class CRM_StepDefinitions {
        crm_page.clickOkButton();
     }
 
-    @Then("verify that {string} is not displayed")
-    public void verify_that_is_not_displayed(String string) {
-        crm_page.deleteOpportunity();
+    @Then("verify that Opportunity is not displayed")
+    public void verify_that_Opportunity_is_not_displayed() {
+    crm_page.deleteOpportunity();
     }
 
 

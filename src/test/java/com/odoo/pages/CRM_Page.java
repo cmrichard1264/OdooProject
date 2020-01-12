@@ -313,16 +313,15 @@ public class CRM_Page extends BasePage {
     }
 
      //verify that opportunity is not displayed
-    public boolean deleteOpportunity() {
-        BrowserUtils.wait(2);
-        boolean present;
-        try {
-            Driver.get().findElement(By.xpath("//*[text() ='Opportunity #4']"));
-            present = true;
-        } catch (NoSuchElementException e) {
-            present = false;
-        }
-        return present;
+    public void deleteOpportunity() {
+//        BrowserUtils.wait(2);
 
+        BrowserUtils.wait(2);
+        if(Driver.get().findElements(By.xpath("//*[text() ='Opportunity #4']")).size() != 0) {
+            System.out.println("Element is present please check you code!!!");
+        } else{
+            System.out.println("Good Work");
+        }
+//
     }
 }
