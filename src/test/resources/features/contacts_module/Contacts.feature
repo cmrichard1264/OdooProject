@@ -1,4 +1,5 @@
 @regression
+  #@contacts_module
 Feature: Contacts page testing
 
   Background: user is on the login page
