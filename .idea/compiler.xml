@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="OdooOnline20" />
         <module name="OdooOnline20New" />
+        <module name="OdooOnline20_2" />
+        <module name="OdooOnline20" />
       </profile>
     </annotationProcessing>
   </component>

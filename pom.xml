@@ -65,7 +65,7 @@
                 <configuration>
                     <runOrder>Alphabetical</runOrder>
                     <includes>
-                        <include>**/Runner.java</include>
+                        <include>**/CucumberRunner.java</include>
                         <include>**/FailedRunner.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
@@ -144,6 +144,7 @@
             </build>
         </profile>
     </profiles>
+
 
 
 </project>
