@@ -11,11 +11,11 @@ Feature: Contacts page testing
   Scenario: Create a new contact
     Given user logs in as "pos5"
     Then user navigates to Contacts module
-    Then user creates a contact
+    Then user creates a contact "elton john"
 
     @delete_a_contact
       Scenario: Delete a contact
-      Given user logs in as "pos1"
+      Given user logs in as "pos5"
       Then user navigates to Contacts module
       Then search and delete "elton john" contact
 
