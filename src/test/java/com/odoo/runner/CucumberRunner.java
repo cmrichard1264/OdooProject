@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         dryRun = false,
         tags = "@contacts_page",
         plugin = {"html:target/default-cucumber-reports",
-                "json:target/cucumber.json"
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
         }
 )
 
