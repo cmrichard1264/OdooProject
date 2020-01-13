@@ -67,11 +67,11 @@ public class ContactsPage extends BasePage {
 
 
 
-    public void createContact() {
+    public void createContact(String contact) {
         BrowserUtils.wait(1);
         create.click();
         BrowserUtils.wait(2);
-        name.sendKeys("Elton John");
+        name.sendKeys(contact);
         street.sendKeys("123 Love Street");
         city.sendKeys("Louisville");
         zip.sendKeys("10001");

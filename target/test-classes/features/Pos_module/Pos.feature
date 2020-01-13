@@ -1,5 +1,4 @@
 @regression
-  #@pos_page
 Feature:Pos page testing
 
   #Robert

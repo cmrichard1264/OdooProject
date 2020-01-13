@@ -41,10 +41,10 @@ public class ContactsStepDefinitions {
         System.out.println("I am in Contacts module");
     }
 
-    @Then("user creates a contact")
-    public void user_creates_a_contact() {
-        contactsPage.createContact();
-        System.out.println("Contact created successfully!");
+    @Then("user creates a contact {string}")
+    public void user_creates_a_contact(String contact) {
+        contactsPage.createContact(contact);
+        System.out.println(contact+" created successfully!");
     }
 
     @Then("search and delete {string} contact")

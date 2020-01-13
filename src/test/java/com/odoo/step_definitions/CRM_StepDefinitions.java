@@ -268,7 +268,7 @@ public class CRM_StepDefinitions {
 
     @Then("user verifies that message displayed is equal to {string}")
     public void user_verifies_that_message_displayed_is_equal_to(String expectedText) {
-        BrowserUtils.wait(1);
+        BrowserUtils.wait(1); //added by Madina
         String actualText = crm_page.newTagName.getText();
         Assert.assertEquals(actualText, expectedText);
         System.out.println(actualText+ " is equals to "+expectedText+"!");
