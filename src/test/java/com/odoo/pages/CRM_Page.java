@@ -323,6 +323,8 @@ public class CRM_Page extends BasePage {
 //        BrowserUtils.wait(2);
 
         BrowserUtils.wait(2);
+
+
         if(Driver.get().findElements(By.xpath("//*[text() ='Opportunity #4']")).size() != 0) {
             System.out.println("Element is present please check you code!!!");
         } else{
