@@ -297,7 +297,7 @@ public class CRM_Page extends BasePage {
 
     // click the vertical ellipsis
     public void clickVerticalEllipsisDots(){
-        BrowserUtils.waitForClickablility(verticalEllipsisDotsElements,3);
+        BrowserUtils.waitForClickablility(verticalEllipsisDotsElements,5);
         verticalEllipsisDotsElements.click();
     }
 
