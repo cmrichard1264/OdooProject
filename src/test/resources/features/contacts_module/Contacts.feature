@@ -17,7 +17,7 @@ Feature: Contacts page testing
       Scenario: Delete a contact
       Given user logs in as "pos1"
       Then user navigates to Contacts module
-      Then search and delete "Dzhamol" contact
+      Then search and delete "elton john" contact
 
 
     #Suna
