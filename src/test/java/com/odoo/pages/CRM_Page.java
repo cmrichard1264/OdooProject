@@ -150,6 +150,7 @@ public class CRM_Page extends BasePage {
         List<WebElement> fiveButtons = new ArrayList<WebElement>(Arrays.asList(list, kanban, calendar, pivot, graph));
 
         for(WebElement eachButton: fiveButtons){
+            BrowserUtils.wait(1);
             eachButton.click();
             Assert.assertTrue("This button is not displayed!",eachButton.isDisplayed());
            //BrowserUtils.wait(1);
