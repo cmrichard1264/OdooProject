@@ -1,18 +1,105 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/crm_module/Pipeline.feature");
 formatter.feature({
-  "name": "Contacts page testing",
+  "name": "Pipeline Module Functionality",
   "description": "",
-  "keyword": "Feature",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "Verify that create an opportunity when click the create button.",
+  "description": "",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@contacts_page"
+      "name": "@PipelineTest1"
     }
   ]
 });
-formatter.background({
+formatter.step({
   "name": "user is on the login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user navigates to \"CRM\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user click to Create button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify that \"Create an Opportunity\" module-title display",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enter Opportunity Title in the \"\u003cOpportunity\u003e\" Title box",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enter customer name in the \"\u003cCustomer\u003e\" box",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "verify that \"Create a Customer\" second module-title display",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user click Create button on the Create a Customer module",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clear the expected revenue box",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enter amount in \"\u003cExpected Revenue\u003e\" box",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user pick the priority",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user click the Create button.",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify that \"\u003cOpportunity\u003e\" displayed",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "Opportunity",
+        "Customer",
+        "Expected Revenue"
+      ]
+    },
+    {
+      "cells": [
+        "Opportunity #4",
+        "Ibr",
+        "2500"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Verify that create an opportunity when click the create button.",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@PipelineTest1"
+    }
+  ]
 });
 formatter.before({
   "status": "passed"
@@ -27,22 +114,9 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Create a new contact",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@create_a_contact"
-    }
-  ]
-});
 formatter.step({
-  "name": "user logs in as \"pos5\"",
-  "keyword": "Given "
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
 });
 formatter.match({
   "location": "CRM_StepDefinitions.user_logs_in_as(String)"
@@ -51,21 +125,121 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
-  "keyword": "Then "
+  "name": "user navigates to \"CRM\"",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "CRM_StepDefinitions.user_navigates_to(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates a contact",
+  "name": "user click to Create button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_creates_a_contact()"
+  "location": "CRM_StepDefinitions.user_click_to_Create_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify that \"Create an Opportunity\" module-title display",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.verify_that_module_title_display(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter customer name in the \"Ibr\" box",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify that \"Create a Customer\" second module-title display",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.verifyThatSecondModuleTitleDisplay(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user click Create button on the Create a Customer module",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clear the expected revenue box",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter amount in \"2500\" box",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user pick the priority",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_pick_the_priority()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user click the Create button.",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_click_the_Create_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify that \"Opportunity #4\" displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.verify_that_displayed(String)"
 });
 formatter.result({
   "status": "passed"
@@ -73,10 +247,122 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.background({
-  "name": "user is on the login page",
+formatter.scenarioOutline({
+  "name": "Deleting the created an opportunity",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@deletingOpportunity"
+    },
+    {
+      "name": "@test2"
+    },
+    {
+      "name": "@PipelineTest1"
+    }
+  ]
+});
+formatter.step({
+  "name": "user is on the login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user navigates to \"CRM\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user click to Create button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enter Opportunity Title in the \"\u003cOpportunity\u003e\" Title box",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enter customer name in the \"\u003cCustomer\u003e\" box",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user click Create button on the Create a Customer module",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clear the expected revenue box",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enter amount in \"\u003cExpected Revenue\u003e\" box",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user pick the priority",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user click the Create button.",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user click the vertical ellipsis",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user click the Delete button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify that \"Are you sure you want to delete this record ?\" sentence displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "click the OK button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify that Opportunity is not displayed",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "Opportunity",
+        "Customer",
+        "Expected Revenue"
+      ]
+    },
+    {
+      "cells": [
+        "Opportunity #4",
+        "Ibr",
+        "2500"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Deleting the created an opportunity",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@deletingOpportunity"
+    },
+    {
+      "name": "@test2"
+    },
+    {
+      "name": "@PipelineTest1"
+    }
+  ]
 });
 formatter.before({
   "status": "passed"
@@ -91,22 +377,9 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Delete a contact",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@delete_a_contact"
-    }
-  ]
-});
 formatter.step({
-  "name": "user logs in as \"pos1\"",
-  "keyword": "Given "
+  "name": "user logs in as \"eventscrmmanager2\"",
+  "keyword": "When "
 });
 formatter.match({
   "location": "CRM_StepDefinitions.user_logs_in_as(String)"
@@ -115,169 +388,141 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "search and delete \"elton john\" contact",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.search_and_delete_contact(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "user is on the login page",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify  that check box is clicked",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@Verify_checkbox_isClicked"
-    }
-  ]
-});
-formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in as inventory_manager",
+  "name": "user navigates to \"CRM\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "CRM_StepDefinitions.user_navigates_to(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
+  "name": "user click to Create button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "CRM_StepDefinitions.user_click_to_Create_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that the top checkbox is clicked",
+  "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_the_top_checkbox_is_clicked()"
+  "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "user is on the login page",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
+  "name": "user enter customer name in the \"Ibr\" box",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify that display",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@contacts_page"
-    },
-    {
-      "name": "@Verify_message_isDisplayed"
-    }
-  ]
-});
-formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+  "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in as inventory_manager",
+  "name": "user click Create button on the Create a Customer module",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to Contacts module",
+  "name": "user clear the expected revenue box",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter amount in \"2500\" box",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user pick the priority",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_pick_the_priority()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user click the Create button.",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_navigates_to_module()"
+  "location": "CRM_StepDefinitions.user_click_the_Create_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that message is displayed",
+  "name": "user click the vertical ellipsis",
   "keyword": "And "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.verify_that_message_is_displayed()"
+  "location": "CRM_StepDefinitions.user_click_the_vertical_ellipsis()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user click the Delete button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_click_the_Delete_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify that \"Are you sure you want to delete this record ?\" sentence displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.verify_that_sentence_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click the OK button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.click_the_OK_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify that Opportunity is not displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.verify_that_Opportunity_is_not_displayed()"
 });
 formatter.result({
   "status": "passed"
