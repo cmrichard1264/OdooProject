@@ -78,13 +78,8 @@ public class CRM_StepDefinitions {
         }
     }
 
-
-
     //##################################################################################################################
     //##################################################################################################################
-
-
-
 
     //      Feature: Quotations Module Functionality
     //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
@@ -99,12 +94,8 @@ public class CRM_StepDefinitions {
 
     }
 
-
-
     //##################################################################################################################
     //##################################################################################################################
-
-
 
     //      Feature: Quotations Module Functionality
     //      Scenario: Verify that "List", "Kanban", "Calendar", "Pivot" and "Graph" buttons are functioning
@@ -127,11 +118,10 @@ public class CRM_StepDefinitions {
     //##################################################################################################################
     //##################################################################################################################
 
-
     //      Feature: Quotations Module Functionality
     //      Scenario: Verify that user is able to check one of the quotations, save it as a template and send a recovery email
     //      By Noah Adams
-    //      01.11.2020   /  16:13 - 16;33 PM
+    //      01.11.2020   /  16:13 - 16:33 PM
 
     @Then("user clicks at {string} option")
     public void user_clicks_at_option(String option) {
