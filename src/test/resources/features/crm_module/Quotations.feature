@@ -1,3 +1,4 @@
+@regression
 Feature: Quotations Module Functionality
 
   Background: user logs in as eventscrmmanager2 and clicks at the "CRM" and "Quotations" modules

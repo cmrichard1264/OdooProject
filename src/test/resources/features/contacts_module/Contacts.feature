@@ -1,4 +1,4 @@
-@contacts_page
+@regression
 Feature: Contacts page testing
 
   Background: user is on the login page

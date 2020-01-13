@@ -1,3 +1,4 @@
+@regression
 Feature: Pipeline Module Functionality
 
   # Created by ibrahim_Yazar
