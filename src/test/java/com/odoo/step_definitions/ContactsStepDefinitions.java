@@ -1,14 +1,13 @@
 package com.odoo.step_definitions;
 
 
-        import com.odoo.pages.ContactsPage;
-        import com.odoo.pages.LoginPage;
-        import com.odoo.utilities.BrowserUtils;
-        import com.odoo.utilities.ConfigurationReader;
-        import com.odoo.utilities.Driver;
-        import io.cucumber.java.en.Given;
-        import io.cucumber.java.en.Then;
-        import io.cucumber.java.en.When;
+import com.odoo.pages.ContactsPage;
+import com.odoo.pages.LoginPage;
+import com.odoo.utilities.ConfigurationReader;
+import com.odoo.utilities.Driver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
 
 
 public class ContactsStepDefinitions {
@@ -43,12 +42,14 @@ public class ContactsStepDefinitions {
 
     @Then("user creates a contact {string}")
     public void user_creates_a_contact(String contact) {
+        contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.createContact(contact);
         System.out.println(contact+" created successfully!");
     }
 
     @Then("search and delete {string} contact")
     public void search_and_delete_contact(String contact) {
+        contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.deleteContact(contact);
         System.out.println(contact+" successfully deleted!  ");
 
@@ -56,12 +57,14 @@ public class ContactsStepDefinitions {
 
     @Then("verify that the top checkbox is clicked")
     public void verify_that_the_top_checkbox_is_clicked() {
+        contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.CheckBoxisClicked();
         System.out.println("Box is checked");
     }
 
     @Then("verify that message is displayed")
     public void verify_that_message_is_displayed() {
+        contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.MessageIsDisplayed();
         System.out.println("Message is displayed");
     }
