@@ -142,12 +142,10 @@ public class CRM_Page extends BasePage {
 
     public void quotationsFiveButtons() {
         List<WebElement> fiveButtons = new ArrayList<WebElement>(Arrays.asList(list, kanban, calendar, pivot, graph));
-
         for(WebElement eachButton: fiveButtons){
-            BrowserUtils.wait(1); //added by Madina
+            waitUntilLoaderMaskDisappear();
             eachButton.click();
             Assert.assertTrue("This button is not displayed!",eachButton.isDisplayed());
-           //BrowserUtils.wait(1);
         }
 
     }
@@ -184,9 +182,7 @@ public class CRM_Page extends BasePage {
 
 
     public void navigateToCrmModule() {
-//        wait.until(ExpectedConditions.visibilityOf(crmModule));
-//        wait.until(ExpectedConditions.elementToBeClickable(crmModule));
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappearBasePage();
         crmModule.click();
     }
 
@@ -261,18 +257,18 @@ public class CRM_Page extends BasePage {
 
 //***************Cihan************************
     public void createNewTag(String newTag){
-        BrowserUtils.wait(3);
+        waitUntilLoaderMaskDisappear();
         createButton.click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         tagNameInput.sendKeys(newTag);
         saveButton.click();
     }
 
     public void deleteTag(){
         Driver.get().findElement(By.xpath("//button[contains(text(), \"Action\")]")).click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         Driver.get().findElement(By.xpath("//a[contains(text(), \"Delete\")]")).click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         Driver.get().findElement(By.xpath("//button[@class=\"btn btn-sm btn-primary\"]")).click();
     }
     //*******************Cihan*****************************

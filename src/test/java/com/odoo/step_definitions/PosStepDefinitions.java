@@ -12,7 +12,6 @@ import io.cucumber.java.en.When;
 public class PosStepDefinitions {
 
     LoginPage loginPage = new LoginPage();
-
     PosPage posPage = new PosPage();
 
     @Given("user logs in as Pos manager")
@@ -29,13 +28,10 @@ public class PosStepDefinitions {
         System.out.println("I am in Pos Module");
     }
 
-    @Then("verify that page limit is {int}")
-    public void verify_that_page_limit_is(Integer int1) {
-
-
-
-        posPage.PageLimit();
-        System.out.println("Page limit is "+int1);
+    @Then("verify that page limit is {string}")
+    public void verify_that_page_limit_is(String limit) {
+        posPage.PageLimit(limit);
+        System.out.println("Page limit is "+limit);
     }
     @Given("userlogs in as pos_manager")
     public void userlogs_in_as_pos_manager() {
@@ -65,9 +61,6 @@ public class PosStepDefinitions {
     @Then("verify that configure message displayed")
     public void verify_that_configure_message_displayed() {
         posPage.MessageDisplayed();
-        BrowserUtils.wait(2);
-
-
     }
 
     @When("user hovers the mouse on list icon {string} is displayed")

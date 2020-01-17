@@ -31,22 +31,14 @@ public WebElement PosModule;
   public void navigateToPosModule(){
       waitUntilLoaderMaskDisappearBasePage();
       PosModule.click();
-
   }
 
 
-  public void PageLimit() {
-
+  public void PageLimit(String expectedResult) {
       waitUntilLoaderMaskDisappear();
-      String pagelimit = PageLimit.getText();
+      String actualResult = PageLimit.getText();
       waitUntilLoaderMaskDisappear();
-      Integer actualresult = Integer.parseInt(pagelimit);
-      Integer expectedresult = 32;
-      if(actualresult== expectedresult){
-          System.out.println("passed");
-      }else{
-          System.out.println("failed");
-      }
+      Assert.assertEquals("Not Equal", actualResult, expectedResult);
   }
 
   public void NavigateToOrders(){
@@ -54,6 +46,7 @@ public WebElement PosModule;
       Orders.click();
       BrowserUtils.wait(2);
   }
+
   public void typeintoSearchBox(){
       waitUntilLoaderMaskDisappear();
       SearchBox.sendKeys("iphone", Keys.ENTER);
