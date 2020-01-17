@@ -262,7 +262,7 @@ public class CRM_Page extends BasePage {
         Driver.get().findElement(By.xpath("//button[contains(text(), \"Action\")]")).click();
         waitUntilLoaderMaskDisappear();
         Driver.get().findElement(By.xpath("//a[contains(text(), \"Delete\")]")).click();
-        waitUntilLoaderMaskDisappear();
+        BrowserUtils.wait(1);
         Driver.get().findElement(By.xpath("//button[@class=\"btn btn-sm btn-primary\"]")).click();
     }
     //*******************Cihan*****************************
