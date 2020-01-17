@@ -201,7 +201,7 @@ public class CRM_Page extends BasePage {
         Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         costumerNameBoxElemnet.click();
         BrowserUtils.wait(1);
-        costumerNameBoxElemnet.sendKeys(Customer+" ");
+        costumerNameBoxElemnet.sendKeys(Customer);
         BrowserUtils.wait(1);
         clickEmptySpaceElement.click();
     }
