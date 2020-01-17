@@ -1,2 +1,5 @@
-target
+/target
 .idea
+-test-output
+*.iml
+#(hopefully it works this way, we'll se)
