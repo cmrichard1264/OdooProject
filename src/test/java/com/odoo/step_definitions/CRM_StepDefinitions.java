@@ -52,6 +52,7 @@ public class CRM_StepDefinitions {
 
     @Then("user navigates to Quotations")
     public void user_navigates_to_Quotations() {
+        crm_page.waitUntilLoaderMaskDisappear();
         crm_page.quotationsSubModule.click();
     }
 
@@ -209,7 +210,7 @@ public class CRM_StepDefinitions {
 
     @Then("verify that {string} displayed")
     public void verify_that_displayed(String string) {
-        //Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.get().navigate().refresh();
         System.out.println("verify: " + crm_page.verifyNewOpportunity());
         Assert.assertEquals(string, crm_page.verifyNewOpportunity());
