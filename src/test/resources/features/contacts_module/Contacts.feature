@@ -10,30 +10,28 @@ Feature: Contacts page testing
   #Madina
   @create_a_contact
   Scenario: Create a new contact
-    Given user logs in as "pos5"
+    Given user logs in as "Inventory Manager"
     Then user navigates to Contacts module
-    Then user creates a contact "elton john"
+    Then user creates a contact "Suna Tatar"
 
     @delete_a_contact
       Scenario: Delete a contact
-      Given user logs in as "pos5"
+      Given user logs in as "Inventory Manager"
       Then user navigates to Contacts module
-      Then search and delete "elton john" contact
+      Then search and delete "Suna Tatar" contact
 
 
     #Suna
   @Verify_checkbox_isClicked
   Scenario: Verify  that check box is clicked
-    Given user is on the login page
-    And user logs in as inventory_manager
+    Given user logs in as "Inventory Manager"
     Then user navigates to Contacts module
     And verify that the top checkbox is clicked
 
     #Aijamal
   @Verify_message_isDisplayed
   Scenario: Verify that display
-    Given user is on the login page
-    And user logs in as inventory_manager
+    Given user logs in as "Inventory Manager"
     Then user navigates to Contacts module
     And verify that message is displayed
 

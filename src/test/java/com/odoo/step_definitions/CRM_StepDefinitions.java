@@ -41,7 +41,8 @@ public class CRM_StepDefinitions {
     @When("user logs in as {string}")
     public void user_logs_in_as(String string) {
         loginPage.login(string);
-        BrowserUtils.wait(2);
+        System.out.println("User logged in as "+string);
+
     }
 
     @And("user navigates to {string}")

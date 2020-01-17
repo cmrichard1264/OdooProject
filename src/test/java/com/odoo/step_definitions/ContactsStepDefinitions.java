@@ -20,38 +20,38 @@ public class ContactsStepDefinitions {
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
-        System.out.println("I am on the login page");
+        System.out.println("User is on the login page");
         Driver.get().get(ConfigurationReader.getProperty("url"));
     }
 
     @Given("user logs in as inventory_manager")
     public void user_logs_in_as_inventory_manager() {
-        System.out.println("Login as inventory manager");
         //we read username and password from properties file
         //usually in java we use camel case for naming variables
         String userName = ConfigurationReader.getProperty("contacts1.username");
         String password = ConfigurationReader.getProperty("allcontacts.password");
         loginPage.login(userName, password);
+        System.out.println("User logged in as Inventory Manager!");
     }
 
     @Then("user navigates to Contacts module")
     public void user_navigates_to_module() {
         contactsPage.navigateToContacts();
-        System.out.println("I am in Contacts module");
+        System.out.println("User is in Contacts module");
     }
 
     @Then("user creates a contact {string}")
     public void user_creates_a_contact(String contact) {
         contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.createContact(contact);
-        System.out.println(contact+" created successfully!");
+        System.out.println("Contact "+contact+" is created successfully!");
     }
 
     @Then("search and delete {string} contact")
     public void search_and_delete_contact(String contact) {
         contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.deleteContact(contact);
-        System.out.println(contact+" successfully deleted!  ");
+        System.out.println("Contact "+contact+" is deleted successfully!");
 
     }
 
@@ -59,14 +59,14 @@ public class ContactsStepDefinitions {
     public void verify_that_the_top_checkbox_is_clicked() {
         contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.CheckBoxisClicked();
-        System.out.println("Box is checked");
+        System.out.println("Box is checked!");
     }
 
     @Then("verify that message is displayed")
     public void verify_that_message_is_displayed() {
         contactsPage.waitUntilLoaderMaskDisappear();
         contactsPage.MessageIsDisplayed();
-        System.out.println("Message is displayed");
+        System.out.println("Message is displayed!");
     }
 
 
