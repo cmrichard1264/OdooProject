@@ -1,19 +1,13 @@
 package com.odoo.pages;
 
-import com.odoo.step_definitions.CRM_StepDefinitions;
+
 import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.security.PublicKey;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 

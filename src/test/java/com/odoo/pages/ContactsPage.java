@@ -65,12 +65,15 @@ public class ContactsPage extends BasePage {
     @FindBy(xpath = "//button[@class=\"btn btn-sm btn-primary\"]")
     public WebElement deleteOK;
 
+    @FindBy(xpath = "//span[contains(text(), \"Contacts\")]")
+    public WebElement ContactsModule;
+
 
 
     public void createContact(String contact) {
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         create.click();
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         name.sendKeys(contact);
         street.sendKeys("123 Love Street");
         city.sendKeys("Louisville");
@@ -80,44 +83,43 @@ public class ContactsPage extends BasePage {
         email.sendKeys("elton@gmail.com");
         website.sendKeys("elton_john.com");
         save.click();
-        BrowserUtils.wait(3);
+        waitUntilLoaderMaskDisappear();
     }
 
     public void navigateToContacts() {
-        BrowserUtils.wait(2);
-        Driver.get().findElement(By.xpath("//a[@data-menu=\"68\"]")).click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappearBasePage();
+        ContactsModule.click();
     }
 
     public void CheckBoxisClicked() {
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         List.click();
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         topCheckbox.click();
         Assert.assertTrue(topCheckbox.isSelected());
     }
 
     public void MessageIsDisplayed() {
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         Search.sendKeys("Aijamal", Keys.ENTER);
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         Assert.assertTrue(Message.isDisplayed());
     }
 
     public void deleteContact(String contact){
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         Search.sendKeys(contact, Keys.ENTER);
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
         List.click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         selectAllCheckBox.click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         actionButton.click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
         actionDelete.click();
         BrowserUtils.wait(1);
         deleteOK.click();
-        BrowserUtils.wait(1);
+        waitUntilLoaderMaskDisappear();
     }
 
 
