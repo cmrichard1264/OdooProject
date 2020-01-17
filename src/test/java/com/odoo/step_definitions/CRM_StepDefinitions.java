@@ -56,12 +56,10 @@ public class CRM_StepDefinitions {
 
     @Then("user select the {string}")
     public void user_select_the(String string) {
-        BrowserUtils.wait(5);
+        crm_page.waitUntilLoaderMaskDisappear();
         WebElement q = crm_page.quotationSelectAllCheckBox;
-    //        wait.until(ExpectedConditions.visibilityOf(q));
-    //        wait.until(ExpectedConditions.elementToBeClickable(q));
         q.click();
-        BrowserUtils.wait(3);
+        crm_page.waitUntilLoaderMaskDisappear();
         Assert.assertTrue(q.isSelected());
     }
 
@@ -69,7 +67,6 @@ public class CRM_StepDefinitions {
     public void all_checkboxes_are_clicked() {
         int count = 0;
         List<WebElement> allCheckBoxes = crm_page.quotationsAllCheckBoxes;
-        // BrowserUtils.wait(3);
         for (WebElement each : allCheckBoxes) {
             if (each.isSelected()) {
                 count++;
@@ -89,9 +86,7 @@ public class CRM_StepDefinitions {
 
     @Then("user clicks at five {string} in order List, Kanban, Calendar, Pivot and Graph")
     public void user_clicks_at_five_in_order_List_Kanban_Calendar_Pivot_and_Graph(String string) {
-
         crm_page.quotationsFiveButtons();
-
     }
 
     //##################################################################################################################
@@ -104,15 +99,13 @@ public class CRM_StepDefinitions {
 
     @Then("user checks the first present checkbox")
     public void user_checks_the_first_present_checkbox() {
-        BrowserUtils.wait(3);
+        crm_page.waitUntilLoaderMaskDisappear();
         crm_page.firstCheckboxQuotations.click();
     }
 
     @Then("user clicks at Print and Action buttons to see the options")
     public void user_clicks_at_Print_and_Action_buttons_to_see_the_options() {
-
-
-       crm_page.checkTheFunctionaltyOfPrintAndActionButtons();
+        crm_page.checkTheFunctionaltyOfPrintAndActionButtons();
     }
 
     //##################################################################################################################
@@ -152,6 +145,7 @@ public class CRM_StepDefinitions {
 
     @Then("user click to Create button")
     public void user_click_to_Create_button() {
+        crm_page.waitUntilLoaderMaskDisappear();
         crm_page.clickCreateButtonPipelinePage();
     }
 
@@ -214,39 +208,25 @@ public class CRM_StepDefinitions {
 
     @Then("verify that {string} displayed")
     public void verify_that_displayed(String string) {
-        Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.get().navigate().refresh();
         System.out.println("verify: " + crm_page.verifyNewOpportunity());
         Assert.assertEquals(string, crm_page.verifyNewOpportunity());
     }
 
     //*****************ibrahim @deletingOpportunity *****************************
-    @Then("user click the vertical ellipsis")
-    public void user_click_the_vertical_ellipsis() {
-    crm_page.clickVerticalEllipsisDots();
+    @Then("user deletes {string}")
+    public void user_deletes(String string) {
+        crm_page.deleteOpportunity(string);
+        System.out.println(string+" is successfully deleted!");
     }
 
-    @Then("user click the Delete button")
-    public void user_click_the_Delete_button() {
-    crm_page.clickDeleteButton();
-    }
 
-    @Then("verify that {string} sentence displayed")
-    public void verify_that_sentence_displayed(String string) {
-        System.out.println("Warning sentence is: " + crm_page.warningSentence());
-        Assert.assertEquals(string, crm_page.warningSentence());
-    }
 
-    @Then("click the OK button")
-    public void click_the_OK_button() {
-        BrowserUtils.wait(2);
-       crm_page.clickOkButton();
-    }
 
-    @Then("verify that Opportunity is not displayed")
-    public void verify_that_Opportunity_is_not_displayed() {
-    crm_page.deleteOpportunity();
-    }
+
+
+
 
 
     //*****************Cihan*****************************

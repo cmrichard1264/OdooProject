@@ -5,6 +5,7 @@ import com.odoo.utilities.BrowserUtils;
 import com.odoo.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -89,7 +90,7 @@ public class CRM_Page extends BasePage {
     @FindBy (css = "[placeholder='e.g. Customer Deal']")
     public WebElement opportinityBoxElement;
 
-    @FindBy (xpath = "//input [@class='o_input ui-autocomplete-input'][1]")
+    @FindBy (xpath = "//input [@class='o_input ui-autocomplete-input']")
     public WebElement costumerNameBoxElemnet;
 
     @FindBy (css = "[class='o_form_sheet']")
@@ -151,29 +152,22 @@ public class CRM_Page extends BasePage {
     }
 
     public void checkTheFunctionaltyOfPrintAndActionButtons() {
-
-        BrowserUtils.wait(3);
+        waitUntilLoaderMaskDisappear();
         printButtonQuotations.click();
-
         Assert.assertTrue("the button is not displayed!",quotationOrderOption.isDisplayed());
         Assert.assertEquals("the button matches correctly!", "Quotation / Order", quotationOrderOption.getText());
-
-        BrowserUtils.wait(3);
-
+        waitUntilLoaderMaskDisappear();
         actionButtonQuotations.click();
         List<WebElement> options = new ArrayList<>(Arrays.asList((exportButtonQuotations),(deleteButtonQuotations),(invoiceOrderButtonQuotations),(recoveryEmailButtonQuotations)));
         List<String> texts = new ArrayList<>(Arrays.asList("Export", "Delete", "Invoice Order", "Send a Cart Recovery Email"));
-
-
-        BrowserUtils.wait(2);
-
+        waitUntilLoaderMaskDisappear();
         for(int i =0; i < 4; i++) {
             WebElement eachOption = options.get(i);
             String actualText = options.get(i).getText();
             String expectedText = texts.get(i);
             Assert.assertTrue("This option is not visible!",eachOption .isDisplayed());
             Assert.assertEquals("This option doesn't match with expected!", expectedText, actualText);
-            BrowserUtils.wait(2);
+            waitUntilLoaderMaskDisappear();
         }
 
     }
@@ -187,45 +181,45 @@ public class CRM_Page extends BasePage {
     }
 
     public void clickCreateButtonPipelinePage(){
-        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        waitUntilLoaderMaskDisappear();
         createButtonPipelineElement.click();
     }
 
     public String createAnOpportunity_modal_Title(){
-       // wait.until(ExpectedConditions.visibilityOf(createAnOpportunitymodal_TitleElement));
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
       return  createAnOpportunitymodal_TitleElement.getText();
     }
 
     //user enter Opportunity Title in the Opportunity Title box
     public void opportunityBox(String Opportunity){
+        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         opportinityBoxElement.sendKeys(Opportunity);
     }
 
     //user enter customer name in the {string} box
     public void EnterCustomerName(String Customer){
-        Driver.get().manage().timeouts().implicitlyWait(7,TimeUnit.SECONDS);
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         costumerNameBoxElemnet.click();
-        BrowserUtils.wait(2);
-        costumerNameBoxElemnet.sendKeys(Customer);
-        BrowserUtils.wait(2);
+        BrowserUtils.wait(1);
+        costumerNameBoxElemnet.sendKeys(Customer+" ");
+        BrowserUtils.wait(1);
         clickEmptySpaceElement.click();
     }
 
     //verify that "Create a Customer" module-title display
     public String CreateCustomerModuleTitle(){
-      Driver.get().manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+      Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
       return customer_Module_Title_Element.getText();
     }
 
     //user click Create button on the Create a Customer module
     public void createButtonOnCreateCustomerPage(){
-       BrowserUtils.wait(2);
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         createButtonOnCreateOpportunityPage.click();
     }
     //user clear the expected revenue box
     public void clearRevenueBox(){
-        BrowserUtils.wait(2);
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         revenueboxElement.click();
         revenueboxElement.clear();
 
@@ -233,13 +227,13 @@ public class CRM_Page extends BasePage {
 
     //user enter amount in {string} box
     public void enterAmountInRevenueBox(String string){
-        BrowserUtils.wait(2);
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         revenueboxElement.sendKeys(string);
     }
 
     //user pick the priority
     public void selectPriority(){
-        BrowserUtils.wait(2);
+        Driver.get().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         priorityElement.click();
     }
 
@@ -251,7 +245,7 @@ public class CRM_Page extends BasePage {
 
     // verify that {string} displayed
     public String verifyNewOpportunity(){
-        BrowserUtils.wait(2);
+        waitUntilLoaderMaskDisappear();
        return verifyNewOppotunityElement.getText();
     }
 
@@ -274,54 +268,43 @@ public class CRM_Page extends BasePage {
     //*******************Cihan*****************************
 
     //*******************ibrahim @test2*****************************
-    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[5]/div[1]/a/span")
-    public WebElement verticalEllipsisDotsElements;
-
-    @FindBy (xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[5]/div[1]/ul/li[2]/a")
-    public WebElement deleteButtonElement;
-
-    @FindBy (css = "[class='modal-body']")
-    public WebElement sentenceElement;
 
     @FindBy (css = "[class='btn btn-sm btn-primary']")
-    public WebElement okButtonElement;
+    public WebElement deleteOk;
 
-    // click the vertical ellipsis
-    public void clickVerticalEllipsisDots(){
-        BrowserUtils.wait(2);
-        BrowserUtils.waitForClickablility(verticalEllipsisDotsElements,5);
-        verticalEllipsisDotsElements.click();
-    }
+    @FindBy(xpath = "//input[@class=\"o_searchview_input\"][@placeholder=\"Search...\"]")
+    public WebElement Search;
 
-    // click the Delete button
-    public void clickDeleteButton(){
-        BrowserUtils.waitForClickablility(deleteButtonElement,3);
-        deleteButtonElement.click();
-    }
+    @FindBy(xpath = "//button[@data-original-title=\"List\"]")
+    public WebElement List;
 
-    //Are you sure you want to delete this record ? sentence dispaled
-    public String warningSentence(){
-       String sentence = sentenceElement.getText();
-        return sentence;
-    }
+    @FindBy(xpath = "//tr/th/div/input")
+    public WebElement selectAllCheckBox;
 
-    //click the OK button
-    public void clickOkButton(){
-        okButtonElement.click();
-    }
+    @FindBy(xpath = "//button[contains(text(), \"Action\")]")
+    public WebElement actionButton;
 
-     //verify that opportunity is not displayed
-    public void deleteOpportunity() {
-//        BrowserUtils.wait(2);
+    @FindBy(xpath = "//a[contains(text(), \"Delete\")]")
+    public WebElement actionDelete;
 
-        BrowserUtils.wait(2);
-
-
-        if(Driver.get().findElements(By.xpath("//*[text() ='Opportunity #4']")).size() != 0) {
-            System.out.println("Element is present please check you code!!!");
-        } else{
-            System.out.println("Good Work");
+    public void deleteOpportunity(String opportunity){
+            waitUntilLoaderMaskDisappear();
+            Search.sendKeys(opportunity, Keys.ENTER);
+            waitUntilLoaderMaskDisappear();
+            List.click();
+            waitUntilLoaderMaskDisappear();
+            selectAllCheckBox.click();
+            waitUntilLoaderMaskDisappear();
+            actionButton.click();
+            waitUntilLoaderMaskDisappear();
+            actionDelete.click();
+            BrowserUtils.wait(1);
+            deleteOk.click();
+            waitUntilLoaderMaskDisappear();
         }
-//
+
+
     }
-}
+
+
+
