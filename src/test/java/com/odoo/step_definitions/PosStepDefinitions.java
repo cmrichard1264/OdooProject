@@ -7,6 +7,7 @@ import com.odoo.utilities.ConfigurationReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class PosStepDefinitions {
 
@@ -68,4 +69,11 @@ public class PosStepDefinitions {
 
 
     }
+
+    @When("user hovers the mouse on list icon {string} is displayed")
+    public void user_hovers_the_mouse_on_list_icon_is_displayed(String string) {
+    posPage.ListIsDisplayed(string);
+        System.out.println(string+" is displayed!");
+    }
+
 }

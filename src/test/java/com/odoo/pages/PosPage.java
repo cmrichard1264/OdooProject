@@ -1,10 +1,12 @@
 package com.odoo.pages;
 
 import com.odoo.utilities.BrowserUtils;
+import com.odoo.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
@@ -68,6 +70,15 @@ public WebElement PosModule;
 
 
 
+  }
+
+  public void ListIsDisplayed(String expectedList){
+      BrowserUtils.wait(1);
+      Actions act=new Actions(Driver.get());
+      WebElement hover=Driver.get().findElement(By.xpath("//*[@data-view-type='list']"));
+      act.moveToElement(hover).build().perform();
+      String actualList=hover.getAttribute("data-original-title");
+      Assert.assertEquals("not equal",actualList,expectedList);
   }
 
 
