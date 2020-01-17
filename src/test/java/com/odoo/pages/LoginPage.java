@@ -31,13 +31,10 @@ public class LoginPage extends BasePage{
     }
 
     public void login(String role) {
-
         String userName = "";
         String password = "";
-
-
         switch (role) {
-            case ("contancts_user1"):
+            case ("Inventory Manager"):
                 userName = ConfigurationReader.getProperty("contacts1.username");
                 password = ConfigurationReader.getProperty("allcontacts.password");
                 break;

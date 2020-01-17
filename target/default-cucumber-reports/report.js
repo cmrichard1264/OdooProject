@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "verify that page limit is 16",
+  "name": "verify that page limit is 32",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -18,7 +18,7 @@ formatter.scenario({
       "name": "@regression"
     },
     {
-      "name": "@page_limit_is_16"
+      "name": "@page_limit_is_32"
     }
   ]
 });
@@ -56,17 +56,15 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that page limit is 16",
+  "name": "verify that page limit is \"32\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PosStepDefinitions.verify_that_page_limit_is(Integer)"
+  "location": "PosStepDefinitions.verify_that_page_limit_is(String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class\u003d\"o_pager_limit\"]\"}\n  (Session info: chrome\u003d79.0.3945.117)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2GM29HE\u0027, ip: \u0027192.168.1.185\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\madin\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60374}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: bb9b42a4abebba8a72047b0eb1d5b220\n*** Element info: {Using\u003dxpath, value\u003d//span[@class\u003d\"o_pager_limit\"]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy20.getText(Unknown Source)\r\n\tat com.odoo.pages.PosPage.PageLimit(PosPage.java:39)\r\n\tat com.odoo.step_definitions.PosStepDefinitions.verify_that_page_limit_is(PosStepDefinitions.java:36)\r\n\tat ✽.verify that page limit is 16(file:src/test/resources/features/Pos_module/Pos.feature:10)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", null);
 formatter.after({
   "status": "passed"
 });
@@ -139,6 +137,65 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "verify that \"List\" is displayed",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@regression"
+    },
+    {
+      "name": "@List_menu_check"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user logs in as \"pos2\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to POS module",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "PosStepDefinitions.user_navigates_to_POS_module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user hovers the mouse on list icon \"List\" is displayed",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "PosStepDefinitions.user_hovers_the_mouse_on_list_icon_is_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 formatter.uri("file:src/test/resources/features/contacts_module/Contacts.feature");
 formatter.feature({
   "name": "Contacts page testing",
@@ -182,7 +239,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user logs in as \"pos5\"",
+  "name": "user logs in as \"Inventory Manager\"",
   "keyword": "Given "
 });
 formatter.match({
@@ -202,11 +259,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user creates a contact",
+  "name": "user creates a contact \"Suna Tatar\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_creates_a_contact()"
+  "location": "ContactsStepDefinitions.user_creates_a_contact(String)"
 });
 formatter.result({
   "status": "passed"
@@ -246,7 +303,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user logs in as \"pos1\"",
+  "name": "user logs in as \"Inventory Manager\"",
   "keyword": "Given "
 });
 formatter.match({
@@ -266,7 +323,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "search and delete \"elton john\" contact",
+  "name": "search and delete \"Suna Tatar\" contact",
   "keyword": "Then "
 });
 formatter.match({
@@ -310,21 +367,11 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user is on the login page",
+  "name": "user logs in as \"Inventory Manager\"",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in as inventory_manager",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
 });
 formatter.result({
   "status": "passed"
@@ -384,21 +431,11 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user is on the login page",
+  "name": "user logs in as \"Inventory Manager\"",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ContactsStepDefinitions.user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in as inventory_manager",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ContactsStepDefinitions.user_logs_in_as_inventory_manager()"
+  "location": "CRM_StepDefinitions.user_logs_in_as(String)"
 });
 formatter.result({
   "status": "passed"
@@ -683,123 +720,16 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.scenarioOutline({
-  "name": "Deleting the created an opportunity",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@deletingOpportunity"
-    },
-    {
-      "name": "@test2"
-    },
-    {
-      "name": "@PipelineTest1"
-    }
-  ]
-});
-formatter.step({
-  "name": "user is on the login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "user logs in as \"eventscrmmanager2\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user navigates to \"CRM\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user click to Create button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user enter Opportunity Title in the \"\u003cOpportunity\u003e\" Title box",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user enter customer name in the \"\u003cCustomer\u003e\" box",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user click Create button on the Create a Customer module",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clear the expected revenue box",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user enter amount in \"\u003cExpected Revenue\u003e\" box",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user pick the priority",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user click the Create button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user click the vertical ellipsis",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user click the Delete button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "verify that \"Are you sure you want to delete this record ?\" sentence displayed",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "click the OK button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "verify that Opportunity is not displayed",
-  "keyword": "And "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "Opportunity",
-        "Customer",
-        "Expected Revenue"
-      ]
-    },
-    {
-      "cells": [
-        "Opportunity #4",
-        "Ibr",
-        "2500"
-      ]
-    }
-  ]
-});
 formatter.scenario({
   "name": "Deleting the created an opportunity",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
       "name": "@regression"
     },
     {
       "name": "@deletingOpportunity"
-    },
-    {
-      "name": "@test2"
-    },
-    {
-      "name": "@PipelineTest1"
     }
   ]
 });
@@ -837,131 +767,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user click to Create button",
+  "name": "user deletes \"Opportunity #4\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CRM_StepDefinitions.user_click_to_Create_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enter Opportunity Title in the \"Opportunity #4\" Title box",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_enter_Opportunity_Title_in_the_Title_box(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enter customer name in the \"Ibr\" box",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_enter_customer_name_in_the_box(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user click Create button on the Create a Customer module",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_click_Create_button_on_the_Create_a_Customer_module()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clear the expected revenue box",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_clear_the_expected_revenue_box()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enter amount in \"2500\" box",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_enter_amount_in_box(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user pick the priority",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_pick_the_priority()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user click the Create button.",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_click_the_Create_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user click the vertical ellipsis",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_click_the_vertical_ellipsis()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user click the Delete button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.user_click_the_Delete_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "verify that \"Are you sure you want to delete this record ?\" sentence displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.verify_that_sentence_displayed(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click the OK button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.click_the_OK_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "verify that Opportunity is not displayed",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CRM_StepDefinitions.verify_that_Opportunity_is_not_displayed()"
+  "location": "CRM_StepDefinitions.user_deletes(String)"
 });
 formatter.result({
   "status": "passed"
@@ -1133,10 +943,8 @@ formatter.match({
   "location": "CRM_StepDefinitions.user_clicks_at_five_in_order_List_Kanban_Calendar_Pivot_and_Graph(String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[data-original-title\u003d\"List\"]\"}\n  (Session info: chrome\u003d79.0.3945.117)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2GM29HE\u0027, ip: \u0027192.168.1.185\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\madin\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: ad024fb170c25c1b4e7b7f590d5c457f\n*** Element info: {Using\u003dcss selector, value\u003d[data-original-title\u003d\"List\"]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy20.click(Unknown Source)\r\n\tat com.odoo.pages.CRM_Page.quotationsFiveButtons(CRM_Page.java:153)\r\n\tat com.odoo.step_definitions.CRM_StepDefinitions.user_clicks_at_five_in_order_List_Kanban_Calendar_Pivot_and_Graph(CRM_StepDefinitions.java:93)\r\n\tat ✽.user clicks at five \"buttons\" in order List, Kanban, Calendar, Pivot and Graph(file:src/test/resources/features/crm_module/Quotations.feature:18)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded1.png", null);
 formatter.after({
   "status": "passed"
 });
@@ -1423,8 +1231,7 @@ formatter.match({
   "location": "CRM_StepDefinitions.user_verifies_that_message_displayed_is_equal_to(String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@name\u003d\"name\"]\"}\n  (Session info: chrome\u003d79.0.3945.117)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-2GM29HE\u0027, ip: \u0027192.168.1.185\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\madin\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63012}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 4cdeb1b52db3a52ede22451ff9c278c4\n*** Element info: {Using\u003dxpath, value\u003d//span[@name\u003d\"name\"]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy20.getText(Unknown Source)\r\n\tat com.odoo.step_definitions.CRM_StepDefinitions.user_verifies_that_message_displayed_is_equal_to(CRM_StepDefinitions.java:272)\r\n\tat ✽.user verifies that message displayed is equal to \"New Cars\"(file:src/test/resources/features/crm_module/module.feature:13)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "user deletes the tag \"New Cars\"",
@@ -1434,9 +1241,8 @@ formatter.match({
   "location": "CRM_StepDefinitions.user_deletes_the_tag(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded2.png", null);
 formatter.after({
   "status": "passed"
 });

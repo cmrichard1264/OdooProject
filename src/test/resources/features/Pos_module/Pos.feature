@@ -3,12 +3,12 @@
 Feature:Pos page testing
 
   #Robert
- @page_limit_is_16
-  Scenario: verify that page limit is 16
+ @page_limit_is_32
+  Scenario: verify that page limit is 32
     Given user is on the login page
     And user logs in as Pos manager
     Then user navigates to Pos Module
-    And verify that page limit is 16
+    And verify that page limit is "32"
 
    #Aysel
   @configure_message
