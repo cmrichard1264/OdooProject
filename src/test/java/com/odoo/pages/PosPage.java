@@ -27,20 +27,19 @@ public WebElement PosModule;
     public WebElement message;
 
   public void navigateToPosModule(){
-      BrowserUtils.wait(2);
+      waitUntilLoaderMaskDisappearBasePage();
       PosModule.click();
-      BrowserUtils.wait(2);
+
   }
 
 
   public void PageLimit() {
 
-      BrowserUtils.wait(2);
+      waitUntilLoaderMaskDisappear();
       String pagelimit = PageLimit.getText();
-      BrowserUtils.wait(1);
+      waitUntilLoaderMaskDisappear();
       Integer actualresult = Integer.parseInt(pagelimit);
       Integer expectedresult = 32;
-
       if(actualresult== expectedresult){
           System.out.println("passed");
       }else{
@@ -54,20 +53,15 @@ public WebElement PosModule;
       BrowserUtils.wait(2);
   }
   public void typeintoSearchBox(){
-      BrowserUtils.wait(2);
+      waitUntilLoaderMaskDisappear();
       SearchBox.sendKeys("iphone", Keys.ENTER);
-      BrowserUtils.wait(2);
+      waitUntilLoaderMaskDisappear();
   }
   public void MessageDisplayed(){
-      BrowserUtils.wait(2);
+      waitUntilLoaderMaskDisappear();
       SearchBox.sendKeys("iphone", Keys.ENTER);
-      BrowserUtils.wait(2);
+      waitUntilLoaderMaskDisappear();
       Assert.assertTrue(message.isDisplayed());
-
-
-
-
-
   }
 
 
