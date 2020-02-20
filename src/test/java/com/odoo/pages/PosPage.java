@@ -14,7 +14,7 @@ import java.util.List;
 public class PosPage extends BasePage{
 
     @FindBy(xpath = "//a[@data-menu=\"484\"]")
-public WebElement PosModule;
+     public WebElement PosModule;
 
     @FindBy(xpath = "//span[@class=\"o_pager_limit\"]")
     public WebElement PageLimit;
